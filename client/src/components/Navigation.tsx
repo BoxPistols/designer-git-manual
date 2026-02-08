@@ -68,26 +68,23 @@ export default function Navigation() {
         }`}
       >
         <div className="p-6">
-          <Link href="/">
-            <a className="flex items-center gap-2 mb-8">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                <span className="text-white font-poppins font-bold text-lg">G</span>
-              </div>
-              <span className="font-poppins font-bold text-lg text-foreground">Git Manual</span>
-            </a>
+          <Link href="/" className="flex items-center gap-2 mb-8">
+            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+              <span className="text-white font-poppins font-bold text-lg">G</span>
+            </div>
+            <span className="font-poppins font-bold text-lg text-foreground">Git Manual</span>
           </Link>
 
           <div className="space-y-1">
             {sections.map((section) => (
               <div key={section.id}>
                 {section.href ? (
-                  <Link href={section.href}>
-                    <a
-                      onClick={() => setIsOpen(false)}
-                      className="block px-4 py-2 rounded-lg text-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground transition-colors"
-                    >
-                      {section.title}
-                    </a>
+                  <Link
+                    href={section.href}
+                    onClick={() => setIsOpen(false)}
+                    className="block px-4 py-2 rounded-lg text-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground transition-colors"
+                  >
+                    {section.title}
                   </Link>
                 ) : (
                   <>
@@ -110,13 +107,13 @@ export default function Navigation() {
                     {expandedSection === section.id && section.subsections && (
                       <div className="ml-2 mt-1 space-y-1 border-l-2 border-sidebar-border">
                         {section.subsections.map((subsection) => (
-                          <Link key={subsection.href} href={subsection.href}>
-                            <a
-                              onClick={() => setIsOpen(false)}
-                              className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-sidebar-accent/50 rounded-lg transition-colors"
-                            >
-                              {subsection.title}
-                            </a>
+                          <Link
+                            key={subsection.href}
+                            href={subsection.href}
+                            onClick={() => setIsOpen(false)}
+                            className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-sidebar-accent/50 rounded-lg transition-colors"
+                          >
+                            {subsection.title}
                           </Link>
                         ))}
                       </div>
