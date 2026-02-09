@@ -1,5 +1,4 @@
 import { ArrowRight, History } from 'lucide-react';
-import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import CodeBlock from '@/components/CodeBlock';
 import InfoBox from '@/components/InfoBox';
@@ -401,15 +400,12 @@ export default function HistoryWorkflow() {
 
         {/* Navigation */}
         <div className="flex justify-between items-center pt-8 border-t border-border">
-          <Link href="/workflow/push-pull">
-            <Button variant="outline">戻る</Button>
-          </Link>
-          <Link href="/workflow/branch">
-            <Button className="gap-2">
+          <Button variant="outline" onClick={() => window.location.href = "/workflow/push-pull"}>戻る</Button>
+          <Button className="gap-2" onClick={() => window.location.href = "/workflow/branch"}>
               次へ：ブランチの基本
+              
               <ArrowRight size={20} />
             </Button>
-          </Link>
         </div>
       </div>
     </div>

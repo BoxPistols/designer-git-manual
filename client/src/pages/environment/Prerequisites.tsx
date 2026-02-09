@@ -1,5 +1,4 @@
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
-import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import CodeBlock from '@/components/CodeBlock';
 import InfoBox from '@/components/InfoBox';
@@ -206,12 +205,11 @@ export default function Prerequisites() {
         {/* Navigation */}
         <div className="flex justify-between items-center pt-8 border-t border-border">
           <div></div>
-          <Link href="/environment/cursor">
-            <Button className="gap-2">
+          <Button className="gap-2" onClick={() => window.location.href = "/environment/cursor"}>
               次へ：Cursor をインストール
+              
               <ArrowRight size={20} />
             </Button>
-          </Link>
         </div>
       </div>
     </div>

@@ -1,5 +1,4 @@
 import { ArrowRight } from 'lucide-react';
-import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import CodeBlock from '@/components/CodeBlock';
 import InfoBox from '@/components/InfoBox';
@@ -246,15 +245,12 @@ export default function GitSetup() {
 
         {/* Navigation */}
         <div className="flex justify-between items-center pt-8 border-t border-border">
-          <Link href="/github/account">
-            <Button variant="outline">戻る</Button>
-          </Link>
-          <Link href="/github/first-repo">
-            <Button className="gap-2">
+          <Button variant="outline" onClick={() => window.location.href = "/github/account"}>戻る</Button>
+          <Button className="gap-2" onClick={() => window.location.href = "/github/first-repo"}>
               次へ：最初のリポジトリ作成
+              
               <ArrowRight size={20} />
             </Button>
-          </Link>
         </div>
       </div>
     </div>

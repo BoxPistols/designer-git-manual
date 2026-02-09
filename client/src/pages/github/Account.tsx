@@ -1,5 +1,4 @@
 import { ArrowRight, Mail } from 'lucide-react';
-import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import InfoBox from '@/components/InfoBox';
 
@@ -239,15 +238,12 @@ export default function GitHubAccount() {
 
         {/* Navigation */}
         <div className="flex justify-between items-center pt-8 border-t border-border">
-          <Link href="/environment/nodejs">
-            <Button variant="outline">戻る</Button>
-          </Link>
-          <Link href="/github/setup">
-            <Button className="gap-2">
+          <Button variant="outline" onClick={() => window.location.href = "/environment/nodejs"}>戻る</Button>
+          <Button className="gap-2" onClick={() => window.location.href = "/github/setup"}>
               次へ：Git ローカル設定
+              
               <ArrowRight size={20} />
             </Button>
-          </Link>
         </div>
       </div>
     </div>

@@ -1,5 +1,4 @@
 import { ArrowRight, GitBranch } from 'lucide-react';
-import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import CodeBlock from '@/components/CodeBlock';
 import InfoBox from '@/components/InfoBox';
@@ -313,15 +312,12 @@ export default function CommitWorkflow() {
 
         {/* Navigation */}
         <div className="flex justify-between items-center pt-8 border-t border-border">
-          <Link href="/github/first-repo">
-            <Button variant="outline">戻る</Button>
-          </Link>
-          <Link href="/workflow/push-pull">
-            <Button className="gap-2">
+          <Button variant="outline" onClick={() => window.location.href = "/github/first-repo"}>戻る</Button>
+          <Button className="gap-2" onClick={() => window.location.href = "/workflow/push-pull"}>
               次へ：Push と Pull
+              
               <ArrowRight size={20} />
             </Button>
-          </Link>
         </div>
       </div>
     </div>

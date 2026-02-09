@@ -1,5 +1,4 @@
 import { ArrowRight, Palette } from 'lucide-react';
-import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import CodeBlock from '@/components/CodeBlock';
 import InfoBox from '@/components/InfoBox';
@@ -438,9 +437,7 @@ export default function ModifyReact() {
 
         {/* Navigation */}
         <div className="flex justify-between items-center pt-8 border-t border-border">
-          <Link href="/react/setup">
-            <Button variant="outline">戻る</Button>
-          </Link>
+          <Button variant="outline" onClick={() => window.location.href = "/react/setup"}>戻る</Button>
           <Link href="/">
             <Button className="gap-2">
               トップページに戻る

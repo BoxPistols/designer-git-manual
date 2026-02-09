@@ -1,4 +1,4 @@
-import { Link } from 'wouter';
+import { useLocation } from 'wouter';
 import { ArrowRight, CheckCircle2, Zap, Users, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -84,12 +84,14 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link href="/environment/prerequisites">
-              <Button size="lg" className="gap-2">
-                学習を始める
-                <ArrowRight size={20} />
-              </Button>
-            </Link>
+            <Button
+              size="lg"
+              className="gap-2"
+              onClick={() => window.location.href = '/environment/prerequisites'}
+            >
+              学習を始める
+              <ArrowRight size={20} />
+            </Button>
           </div>
 
           {/* Learning Duration */}
@@ -183,12 +185,14 @@ export default function Home() {
           <p className="text-muted-foreground mb-8">
             では、GitHub と React の世界へ一歩踏み出しましょう。
           </p>
-          <Link href="/environment/prerequisites">
-            <Button size="lg" className="gap-2">
-              今すぐ始める
-              <ArrowRight size={20} />
-            </Button>
-          </Link>
+          <Button
+            size="lg"
+            className="gap-2"
+            onClick={() => window.location.href = '/environment/prerequisites'}
+          >
+            今すぐ始める
+            <ArrowRight size={20} />
+          </Button>
         </div>
       </section>
     </div>

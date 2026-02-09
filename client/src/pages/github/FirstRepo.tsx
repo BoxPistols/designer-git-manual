@@ -1,5 +1,4 @@
 import { ArrowRight, Plus } from 'lucide-react';
-import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import CodeBlock from '@/components/CodeBlock';
 import InfoBox from '@/components/InfoBox';
@@ -365,15 +364,12 @@ export default function FirstRepo() {
 
         {/* Navigation */}
         <div className="flex justify-between items-center pt-8 border-t border-border">
-          <Link href="/github/setup">
-            <Button variant="outline">戻る</Button>
-          </Link>
-          <Link href="/workflow/commit">
-            <Button className="gap-2">
+          <Button variant="outline" onClick={() => window.location.href = "/github/setup"}>戻る</Button>
+          <Button className="gap-2" onClick={() => window.location.href = "/workflow/commit"}>
               次へ：ファイル作成と Commit
+              
               <ArrowRight size={20} />
             </Button>
-          </Link>
         </div>
       </div>
     </div>

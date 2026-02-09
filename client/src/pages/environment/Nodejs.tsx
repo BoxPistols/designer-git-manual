@@ -1,5 +1,4 @@
 import { ArrowRight, Download } from 'lucide-react';
-import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import CodeBlock from '@/components/CodeBlock';
 import InfoBox from '@/components/InfoBox';
@@ -232,15 +231,12 @@ export default function NodejsInstall() {
 
         {/* Navigation */}
         <div className="flex justify-between items-center pt-8 border-t border-border">
-          <Link href="/environment/git">
-            <Button variant="outline">戻る</Button>
-          </Link>
-          <Link href="/github/account">
-            <Button className="gap-2">
+          <Button variant="outline" onClick={() => window.location.href = "/environment/git"}>戻る</Button>
+          <Button className="gap-2" onClick={() => window.location.href = "/github/account"}>
               次へ：GitHub アカウント作成
+              
               <ArrowRight size={20} />
             </Button>
-          </Link>
         </div>
       </div>
     </div>
