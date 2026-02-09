@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'wouter';
 import { ChevronDown, Menu, X } from 'lucide-react';
-import ThemeToggle from './ThemeToggle';
 
 const sections = [
   {
@@ -69,15 +68,12 @@ export default function Navigation() {
         }`}
       >
         <div className="p-6">
-          <div className="flex items-center justify-between mb-8">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-white font-poppins font-bold text-lg">G</span>
-              </div>
-              <span className="font-poppins font-bold text-lg text-foreground">Git Manual</span>
-            </Link>
-            <ThemeToggle />
-          </div>
+          <Link href="/" className="flex items-center gap-2 mb-8">
+            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
+              <span className="text-white font-poppins font-bold text-lg">G</span>
+            </div>
+            <span className="font-poppins font-bold text-lg text-foreground">Git Manual</span>
+          </Link>
 
           <div className="space-y-1">
             {sections.map((section) => (
