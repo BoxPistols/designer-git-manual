@@ -355,6 +355,42 @@ export default function FirstRepo() {
           </div>
         </section>
 
+        {/* GitHub Pages Publishing */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
+            GitHub Pages を公開する設定
+          </h2>
+          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              この環境では、GitHub Actions でビルドして GitHub Pages に公開する設定が一番シンプルです。
+            </p>
+
+            <ol className="space-y-2 text-muted-foreground list-decimal list-inside">
+              <li>リポジトリの「Settings」→「Pages」を開く</li>
+              <li>「Build and deployment」の「Source」で「GitHub Actions」を選択</li>
+              <li>テンプレートから「Vite」を選び、デフォルトのビルド手順を使う</li>
+            </ol>
+
+            <InfoBox type="info" title="公開フォルダの指定">
+              この環境のビルド出力は「dist/public」なので、GitHub Actions の公開パスも「dist/public」に設定します。
+            </InfoBox>
+
+            <p className="text-muted-foreground">
+              GitHub Pages はリポジトリ名のパスで公開されるため、Vite の base パスをリポジトリ名に合わせます。
+            </p>
+
+            <CodeBlock
+              code={`// vite.config.ts\nexport default defineConfig({\n  base: '/your-repo-name/',\n});`}
+              language="ts"
+              title="GitHub Pages 用の base 設定"
+            />
+
+            <InfoBox type="info">
+              「your-repo-name」を実際のリポジトリ名に置き換えてください。アセットやリンクが正しく表示されます。
+            </InfoBox>
+          </div>
+        </section>
+
         {/* Completion */}
         <section className="mb-12">
           <InfoBox type="success" title="リポジトリ作成完了！">
