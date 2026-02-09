@@ -19,7 +19,7 @@ export default function BranchWorkflow() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <div className="bg-gradient-to-r from-primary/10 to-secondary/10 border-b border-border">
+      <div className="bg-primary/5 border-b border-border">
         <div className="max-w-4xl mx-auto px-4 md:px-8 py-12">
           <div className="inline-block mb-4 px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-semibold">
             STEP 11 / 12

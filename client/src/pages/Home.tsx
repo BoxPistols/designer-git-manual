@@ -66,7 +66,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background via-background to-primary/5">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 md:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -116,14 +116,14 @@ export default function Home() {
               >
                 {/* Connector Line */}
                 {index % 2 === 0 && index < learningPath.length - 1 && (
-                  <div className="hidden md:block absolute -right-3 top-1/2 w-6 h-0.5 bg-gradient-to-r from-primary to-transparent" />
+                  <div className="hidden md:block absolute -right-3 top-1/2 w-6 h-0.5 bg-primary/30" />
                 )}
 
                 {/* Card */}
                 <div className="bg-white border border-border rounded-xl p-6 hover:shadow-lg transition-shadow">
                   {/* Step Number */}
                   <div className="flex items-start justify-between mb-4">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
                       <span className="text-white font-poppins font-bold text-lg">
                         {step.number}
                       </span>
@@ -178,7 +178,7 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="py-16 px-4 md:px-8">
-        <div className="max-w-3xl mx-auto bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20 rounded-2xl p-8 md:p-12 text-center">
+        <div className="max-w-3xl mx-auto bg-primary/5 border border-primary/10 rounded-2xl p-8 md:p-12 text-center">
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-4">
             準備はいいですか？
           </h2>

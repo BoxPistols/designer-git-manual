@@ -69,7 +69,7 @@ export default function Navigation() {
       >
         <div className="p-6">
           <Link href="/" className="flex items-center gap-2 mb-8">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
               <span className="text-white font-poppins font-bold text-lg">G</span>
             </div>
             <span className="font-poppins font-bold text-lg text-foreground">Git Manual</span>
