@@ -438,12 +438,10 @@ export default function ModifyReact() {
         {/* Navigation */}
         <div className="flex justify-between items-center pt-8 border-t border-border">
           <Button variant="outline" onClick={() => window.location.href = "/react/setup"}>戻る</Button>
-          <Link href="/">
-            <Button className="gap-2">
-              トップページに戻る
-              <ArrowRight size={20} />
-            </Button>
-          </Link>
+          <Button className="gap-2" onClick={() => window.location.href = "/"}>
+            トップページに戻る
+            <ArrowRight size={20} />
+          </Button>
         </div>
       </div>
     </div>
