@@ -45,6 +45,16 @@ const sections = [
       { title: 'デザイン変更と Git 管理', href: '/react/modify' },
     ],
   },
+  {
+    id: 'advanced-setup',
+    title: '実践的な環境構築',
+    subsections: [
+      { title: 'WSL2 導入', href: '/advanced/wsl2' },
+      { title: 'Linux/Ubuntu 基礎', href: '/advanced/linux-basics' },
+      { title: 'VSCode 導入', href: '/advanced/vscode' },
+      { title: '開発環境の統合確認', href: '/advanced/integration' },
+    ],
+  },
 ];
 
 export default function Navigation() {

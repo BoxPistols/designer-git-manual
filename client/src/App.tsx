@@ -20,14 +20,20 @@ import GitSetup from "./pages/github/Setup";
 import FirstRepo from "./pages/github/FirstRepo";
 
 // Workflow Pages
-import CommitWorkflow from "./pages/workflow/Commit";
-import PushPullWorkflow from "./pages/workflow/PushPull";
-import HistoryWorkflow from "./pages/workflow/History";
-import BranchWorkflow from "./pages/workflow/Branch";
+import CommitPage from "./pages/workflow/Commit";
+import PushPullPage from "./pages/workflow/PushPull";
+import HistoryPage from "./pages/workflow/History";
+import BranchPage from "./pages/workflow/Branch";
 
 // React Pages
 import ReactSetup from "./pages/react/Setup";
-import ModifyReact from "./pages/react/Modify";
+import ReactModify from "./pages/react/Modify";
+
+// Advanced Pages
+import WSL2Setup from "./pages/advanced/WSL2";
+import LinuxBasics from "./pages/advanced/LinuxBasics";
+import VSCodeSetup from "./pages/advanced/VSCode";
+import Integration from "./pages/advanced/Integration";
 
 function Router() {
   return (
@@ -49,14 +55,20 @@ function Router() {
           <Route path={"/github/first-repo"} component={FirstRepo} />
           
           {/* Workflow Section */}
-          <Route path={"/workflow/commit"} component={CommitWorkflow} />
-          <Route path={"/workflow/push-pull"} component={PushPullWorkflow} />
-          <Route path={"/workflow/history"} component={HistoryWorkflow} />
-          <Route path={"/workflow/branch"} component={BranchWorkflow} />
+          <Route path={"/workflow/commit"} component={CommitPage} />
+          <Route path={"/workflow/push-pull"} component={PushPullPage} />
+          <Route path={"/workflow/history"} component={HistoryPage} />
+          <Route path={"/workflow/branch"} component={BranchPage} />
           
           {/* React Section */}
           <Route path={"/react/setup"} component={ReactSetup} />
-          <Route path={"/react/modify"} component={ModifyReact} />
+          <Route path={"/react/modify"} component={ReactModify} />
+          
+          {/* Advanced Section */}
+          <Route path={"/advanced/wsl2"} component={WSL2Setup} />
+          <Route path={"/advanced/linux-basics"} component={LinuxBasics} />
+          <Route path={"/advanced/vscode"} component={VSCodeSetup} />
+          <Route path={"/advanced/integration"} component={Integration} />
           
           <Route path={"/404"} component={NotFound} />
           {/* Final fallback route */}
