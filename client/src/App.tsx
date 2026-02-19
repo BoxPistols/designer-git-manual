@@ -31,6 +31,8 @@ import ReactModify from "./pages/react/Modify";
 
 // Advanced Pages
 import WSL2Setup from "./pages/advanced/WSL2";
+import WSL2SSH from "./pages/advanced/WSL2SSH";
+import GitHubCLI from "./pages/advanced/GitHubCLI";
 import LinuxBasics from "./pages/advanced/LinuxBasics";
 import VSCodeSetup from "./pages/advanced/VSCode";
 import Integration from "./pages/advanced/Integration";
@@ -66,6 +68,8 @@ function Router() {
           
           {/* Advanced Section */}
           <Route path={"/advanced/wsl2"} component={WSL2Setup} />
+          <Route path={"/advanced/wsl2-ssh"} component={WSL2SSH} />
+          <Route path={"/advanced/github-cli"} component={GitHubCLI} />
           <Route path={"/advanced/linux-basics"} component={LinuxBasics} />
           <Route path={"/advanced/vscode"} component={VSCodeSetup} />
           <Route path={"/advanced/integration"} component={Integration} />

@@ -50,6 +50,8 @@ const sections = [
     title: '実践的な環境構築',
     subsections: [
       { title: 'WSL2 導入', href: '/advanced/wsl2' },
+      { title: 'WSL2 での SSH キー接続', href: '/advanced/wsl2-ssh' },
+      { title: 'GitHub CLI 導入', href: '/advanced/github-cli' },
       { title: 'Linux/Ubuntu 基礎', href: '/advanced/linux-basics' },
       { title: 'VSCode 導入', href: '/advanced/vscode' },
       { title: '開発環境の統合確認', href: '/advanced/integration' },
