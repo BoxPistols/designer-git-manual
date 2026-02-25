@@ -337,7 +337,7 @@ git commit -m "Initial commit: Add README"`}
             </div>
 
             <InfoBox type="info">
-              デザイナーの方は、まずは Cursor で AI の助けを借りながら学習を進めることをお勧めします。慣れてきたら VSCode に移行するのも良いでしょう。
+              まずは Cursor で AI の助けを借りながら学習を進めることをお勧めします。慣れてきたら VSCode に移行するのも良いでしょう。
             </InfoBox>
           </div>
         </section>
@@ -352,7 +352,7 @@ git commit -m "Initial commit: Add README"`}
                   おめでとうございます！
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  これで、デザイナーのための GitHub・React 環境構築マニュアルのすべてのステップが完了しました。
+                  これで、はじめての GitHub・React 環境構築マニュアルのすべてのステップが完了しました。
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                   あなたは以下のスキルを習得しました：

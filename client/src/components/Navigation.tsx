@@ -1,6 +1,9 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Link } from 'wouter';
-import { ChevronDown, Menu, X } from 'lucide-react';
+import { ChevronDown, Menu, X, Search } from 'lucide-react';
+import { pages } from '@/lib/navigation';
+import { useOS } from '@/contexts/OSContext';
+import { searchShortcutLabel } from '@/lib/keyLabels';
 
 const sections = [
   {
@@ -73,6 +76,29 @@ const sections = [
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
+  const searchInputRef = useRef<HTMLInputElement>(null);
+  const { selectedOS } = useOS();
+  const isMac = selectedOS === 'mac';
+
+  // Cmd+K / Ctrl+K でフォーカス
+  useEffect(() => {
+    function handleFocusSearch() {
+      setIsOpen(true);
+      requestAnimationFrame(() => searchInputRef.current?.focus());
+    }
+    document.addEventListener('focus-search', handleFocusSearch);
+    return () => document.removeEventListener('focus-search', handleFocusSearch);
+  }, []);
+
+  // 検索結果
+  const searchResults = searchQuery.trim()
+    ? pages.filter((p) =>
+        p.title.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : [];
+
+  const hasSearch = searchQuery.trim().length > 0;
 
   return (
     <>
@@ -91,61 +117,106 @@ export default function Navigation() {
         }`}
       >
         <div className="p-6">
-          <Link href="/" className="flex items-center gap-2 mb-8">
+          <Link href="/" className="flex items-center gap-2 mb-6">
             <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
               <span className="text-white font-poppins font-bold text-lg">G</span>
             </div>
-            <span className="font-poppins font-bold text-lg text-foreground">Git Manual</span>
+            <span className="font-poppins font-bold text-lg text-foreground">はじめての Git</span>
           </Link>
 
-          <div className="space-y-1">
-            {sections.map((section) => (
-              <div key={section.id}>
-                {section.href ? (
-                  <Link
-                    href={section.href}
-                    onClick={() => setIsOpen(false)}
-                    className="block px-4 py-2 rounded-lg text-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground transition-colors"
-                  >
-                    {section.title}
-                  </Link>
-                ) : (
-                  <>
-                    <button
-                      onClick={() =>
-                        setExpandedSection(
-                          expandedSection === section.id ? null : section.id
-                        )
-                      }
-                      className="w-full flex items-center justify-between px-4 py-2 rounded-lg text-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-                    >
-                      <span>{section.title}</span>
-                      <ChevronDown
-                        size={18}
-                        className={`transition-transform ${
-                          expandedSection === section.id ? 'rotate-180' : ''
-                        }`}
-                      />
-                    </button>
-                    {expandedSection === section.id && section.subsections && (
-                      <div className="ml-2 mt-1 space-y-1 border-l-2 border-sidebar-border">
-                        {section.subsections.map((subsection) => (
-                          <Link
-                            key={subsection.href}
-                            href={subsection.href}
-                            onClick={() => setIsOpen(false)}
-                            className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-sidebar-accent/50 rounded-lg transition-colors"
-                          >
-                            {subsection.title}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </>
-                )}
-              </div>
-            ))}
+          {/* 検索 */}
+          <div className="relative mb-4">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
+            <input
+              ref={searchInputRef}
+              type="text"
+              placeholder={`検索... (${searchShortcutLabel(isMac)})`}
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full pl-9 pr-3 py-2 text-sm rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+            />
           </div>
+
+          {/* 検索結果 */}
+          {hasSearch ? (
+            <div className="space-y-1">
+              <p className="px-4 py-1 text-xs font-semibold text-muted-foreground">
+                検索結果 ({searchResults.length}件)
+              </p>
+              {searchResults.length === 0 ? (
+                <p className="px-4 py-2 text-sm text-muted-foreground">
+                  該当するページがありません
+                </p>
+              ) : (
+                searchResults.map((page) => (
+                  <Link
+                    key={page.path}
+                    href={page.path}
+                    onClick={() => {
+                      setIsOpen(false);
+                      setSearchQuery('');
+                    }}
+                    className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-sidebar-accent rounded-lg transition-colors"
+                  >
+                    <span className="text-xs text-primary font-semibold mr-1.5">
+                      STEP {page.step}
+                    </span>
+                    {page.title}
+                  </Link>
+                ))
+              )}
+            </div>
+          ) : (
+            /* 通常のセクションナビ */
+            <div className="space-y-1">
+              {sections.map((section) => (
+                <div key={section.id}>
+                  {section.href ? (
+                    <Link
+                      href={section.href}
+                      onClick={() => setIsOpen(false)}
+                      className="block px-4 py-2 rounded-lg text-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground transition-colors"
+                    >
+                      {section.title}
+                    </Link>
+                  ) : (
+                    <>
+                      <button
+                        onClick={() =>
+                          setExpandedSection(
+                            expandedSection === section.id ? null : section.id
+                          )
+                        }
+                        className="w-full flex items-center justify-between px-4 py-2 rounded-lg text-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                      >
+                        <span>{section.title}</span>
+                        <ChevronDown
+                          size={18}
+                          className={`transition-transform ${
+                            expandedSection === section.id ? 'rotate-180' : ''
+                          }`}
+                        />
+                      </button>
+                      {expandedSection === section.id && section.subsections && (
+                        <div className="ml-2 mt-1 space-y-1 border-l-2 border-sidebar-border">
+                          {section.subsections.map((subsection) => (
+                            <Link
+                              key={subsection.href}
+                              href={subsection.href}
+                              onClick={() => setIsOpen(false)}
+                              className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-sidebar-accent/50 rounded-lg transition-colors"
+                            >
+                              {subsection.title}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </nav>
 

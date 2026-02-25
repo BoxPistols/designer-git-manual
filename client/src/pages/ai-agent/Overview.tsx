@@ -57,7 +57,7 @@ export default function AIAgentOverview() {
             <InfoBox type="info" title="コマンドを覚えなくてOK">
               Git コマンドやプログラミング言語の文法を完璧に覚えていなくても、
               日本語で指示するだけで AI が代わりにやってくれます。
-              デザイナーがコーディングに参加するハードルが大幅に下がります。
+              コーディングに参加するハードルが大幅に下がります。
             </InfoBox>
           </div>
         </section>

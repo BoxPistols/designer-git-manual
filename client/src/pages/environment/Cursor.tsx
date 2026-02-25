@@ -47,7 +47,7 @@ export default function CursorInstall() {
           </h2>
           <div className="bg-white border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Cursor は、AI を搭載した高機能なコードエディタです。コードの自動補完、エラーの自動修正、コードの説明など、AI がコーディングをサポートしてくれます。デザイナーがコーディング未経験でも、AI の助けを借りながら学習することができます。
+              Cursor は、AI を搭載した高機能なコードエディタです。コードの自動補完、エラーの自動修正、コードの説明など、AI がコーディングをサポートしてくれます。コーディング未経験でも、AI の助けを借りながら学習することができます。
             </p>
 
             <div className="bg-secondary/5 border-l-4 border-secondary p-6 rounded">

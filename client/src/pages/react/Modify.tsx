@@ -104,7 +104,7 @@ export default function ModifyReact() {
 
             <div className="bg-secondary/5 border-l-4 border-secondary p-6 rounded">
               <p className="text-muted-foreground">
-                これにより、デザイナーが Git での開発体験を得て、自信を持つことができます。
+                これにより、Git での開発体験を得て、自信を持つことができます。
               </p>
             </div>
           </div>
@@ -432,7 +432,7 @@ export default function ModifyReact() {
         {/* Completion */}
         <section className="mb-12">
           <InfoBox type="success" title="マニュアル完了！">
-            デザイナー向けの GitHub・React 導入マニュアルを完了しました。Git での開発体験を通じて、自信を持って開発に取り組めるようになりました。おめでとうございます！
+            はじめての GitHub・React 導入マニュアルを完了しました。Git での開発体験を通じて、自信を持って開発に取り組めるようになりました。おめでとうございます！
           </InfoBox>
         </section>
 

@@ -50,7 +50,7 @@ export default function Home() {
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: 'デザイナー向け',
+      title: '初心者向け',
       description: 'コーディング未経験者を想定した説明',
     },
     {
@@ -71,7 +71,7 @@ export default function Home() {
       <section className="pt-20 pb-16 px-4 md:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-block mb-6 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/20">
-            <span className="text-secondary font-medium text-sm">デザイナーのための開発入門</span>
+            <span className="text-secondary font-medium text-sm">はじめての開発入門</span>
           </div>
 
           <h1 className="text-5xl md:text-6xl font-poppins font-bold text-foreground mb-6 leading-tight">
@@ -80,7 +80,7 @@ export default function Home() {
           </h1>
 
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            コーディング未経験のデザイナーでも、ステップバイステップで GitHub と React を習得できます。実践的な開発体験を通じて、自信を持って開発に参加できるようになります。
+            コーディング未経験でも、ステップバイステップで GitHub と React を習得できます。実践的な開発体験を通じて、自信を持って開発に参加できるようになります。
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

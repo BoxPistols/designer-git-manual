@@ -44,7 +44,11 @@ import ClaudeCodeBasics from "./pages/ai-agent/ClaudeCodeBasics";
 import CursorCline from "./pages/ai-agent/CursorCline";
 import SubTools from "./pages/ai-agent/SubTools";
 
+import { useKeyboardNav } from "./hooks/useKeyboardNav";
+
 function Router() {
+  useKeyboardNav();
+
   return (
     <div className="flex">
       <Navigation />
