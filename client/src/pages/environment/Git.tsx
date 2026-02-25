@@ -46,7 +46,7 @@ export default function GitInstall() {
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             Git をインストールする理由
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               Git は、ファイルの変更履歴を管理するツールです。このガイドでは、React のコードを Git で管理し、変更内容を GitHub に保存します。Git がなければ、これらの操作ができません。
             </p>
@@ -62,9 +62,9 @@ export default function GitInstall() {
           {selectedOS === 'mac' ? (
             <div className="space-y-8">
               {/* Step 1 */}
-              <div className="bg-white border border-border rounded-lg p-8">
+              <div className="bg-card border border-border rounded-lg p-8">
                 <div className="flex gap-4 mb-6">
-                  <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                     1
                   </div>
                   <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -91,9 +91,9 @@ export default function GitInstall() {
               </div>
 
               {/* Step 2 */}
-              <div className="bg-white border border-border rounded-lg p-8">
+              <div className="bg-card border border-border rounded-lg p-8">
                 <div className="flex gap-4 mb-6">
-                  <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                     2
                   </div>
                   <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -112,9 +112,9 @@ export default function GitInstall() {
               </div>
 
               {/* Step 3 */}
-              <div className="bg-white border border-border rounded-lg p-8">
+              <div className="bg-card border border-border rounded-lg p-8">
                 <div className="flex gap-4 mb-6">
-                  <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                     3
                   </div>
                   <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -139,9 +139,9 @@ export default function GitInstall() {
           ) : (
             <div className="space-y-8">
               {/* Step 1 */}
-              <div className="bg-white border border-border rounded-lg p-8">
+              <div className="bg-card border border-border rounded-lg p-8">
                 <div className="flex gap-4 mb-6">
-                  <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                     1
                   </div>
                   <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -155,7 +155,7 @@ export default function GitInstall() {
                   href="https://git-scm.com/download/win"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
                 >
                   <Download size={18} />
                   Git for Windows ダウンロード
@@ -163,9 +163,9 @@ export default function GitInstall() {
               </div>
 
               {/* Step 2 */}
-              <div className="bg-white border border-border rounded-lg p-8">
+              <div className="bg-card border border-border rounded-lg p-8">
                 <div className="flex gap-4 mb-6">
-                  <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                     2
                   </div>
                   <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -184,9 +184,9 @@ export default function GitInstall() {
               </div>
 
               {/* Step 3 */}
-              <div className="bg-white border border-border rounded-lg p-8">
+              <div className="bg-card border border-border rounded-lg p-8">
                 <div className="flex gap-4 mb-6">
-                  <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                     3
                   </div>
                   <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -216,7 +216,7 @@ export default function GitInstall() {
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             トラブルシューティング
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <div className="space-y-4">
               <h3 className="font-semibold text-foreground">
                 「git: command not found」と表示される場合

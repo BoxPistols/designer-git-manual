@@ -14,7 +14,7 @@ export default function GitHubCLI() {
         <div className="text-sm font-medium text-muted-foreground mb-4">STEP 15 / 18</div>
 
         <div className="mt-8 mb-12">
-          <div className="inline-block px-4 py-2 bg-amber-50 text-amber-700 rounded-full text-sm font-medium mb-6">
+          <div className="inline-block px-4 py-2 bg-amber-50 dark:bg-amber-950/30 text-amber-600 dark:text-amber-400 rounded-full text-sm font-medium mb-6">
             生産性向上
           </div>
 
@@ -68,7 +68,7 @@ sudo apt install gh`}
                 language="bash"
               />
 
-              <div className="mt-8 bg-slate-50 rounded-lg p-6 border border-slate-200">
+              <div className="mt-8 bg-muted rounded-lg p-6 border border-border">
                 <h3 className="font-semibold text-foreground mb-4">対話的なセットアップ</h3>
                 <p className="text-muted-foreground mb-4">以下の質問に答えていきます：</p>
                 <CodeBlock
@@ -298,7 +298,7 @@ source ~/.zshrc   # zsh の場合`}
                 language="bash"
               />
 
-              <div className="mt-8 bg-slate-50 rounded-lg p-6 border border-slate-200">
+              <div className="mt-8 bg-muted rounded-lg p-6 border border-border">
                 <h3 className="font-semibold text-foreground mb-4">対話的なセットアップ</h3>
                 <p className="text-muted-foreground mb-4">以下の質問に答えていきます：</p>
                 <CodeBlock
@@ -493,7 +493,7 @@ alias gic='gh issue create'`}
           </Button>
           <Button
             onClick={() => (window.location.href = '/advanced/integration')}
-            className="ml-auto flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white"
+            className="ml-auto flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground"
           >
             次へ
             <ChevronRight className="w-4 h-4" />

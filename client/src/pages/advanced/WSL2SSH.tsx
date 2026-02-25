@@ -15,7 +15,7 @@ export default function WSL2SSH() {
         <div className="text-sm font-medium text-muted-foreground mb-4">STEP 14 / 18</div>
 
         <div className="mt-8 mb-12">
-          <div className="inline-block px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium mb-6">
+          <div className="inline-block px-4 py-2 bg-green-50 dark:bg-green-950/30 text-green-600 dark:text-green-400 rounded-full text-sm font-medium mb-6">
             Windows ユーザー向け
           </div>
 
@@ -53,7 +53,7 @@ export default function WSL2SSH() {
                 上記の your-email@example.com をあなたの GitHub に登録しているメールアドレスに置き換えてください。
               </InfoBox>
 
-              <div className="mt-8 bg-slate-50 rounded-lg p-6 border border-slate-200">
+              <div className="mt-8 bg-muted rounded-lg p-6 border border-border">
                 <h3 className="font-semibold text-foreground mb-4">実行結果の例</h3>
                 <CodeBlock
                   code={`Generating public/private ed25519 key pair.
@@ -88,7 +88,7 @@ Your public key has been saved in /home/username/.ssh/id_ed25519.pub`}
                 language="bash"
               />
 
-              <div className="mt-8 bg-slate-50 rounded-lg p-6 border border-slate-200">
+              <div className="mt-8 bg-muted rounded-lg p-6 border border-border">
                 <h3 className="font-semibold text-foreground mb-4">実行結果の例</h3>
                 <CodeBlock
                   code={`ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKz... your-email@example.com`}
@@ -115,7 +115,7 @@ Your public key has been saved in /home/username/.ssh/id_ed25519.pub`}
 
               <div className="space-y-6">
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-semibold">
+                  <div className="flex-shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-semibold">
                     1
                   </div>
                   <div>
@@ -129,7 +129,7 @@ Your public key has been saved in /home/username/.ssh/id_ed25519.pub`}
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-semibold">
+                  <div className="flex-shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-semibold">
                     2
                   </div>
                   <div>
@@ -143,7 +143,7 @@ Your public key has been saved in /home/username/.ssh/id_ed25519.pub`}
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-semibold">
+                  <div className="flex-shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-semibold">
                     3
                   </div>
                   <div>
@@ -157,7 +157,7 @@ Your public key has been saved in /home/username/.ssh/id_ed25519.pub`}
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-semibold">
+                  <div className="flex-shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-semibold">
                     4
                   </div>
                   <div>
@@ -171,7 +171,7 @@ Your public key has been saved in /home/username/.ssh/id_ed25519.pub`}
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-semibold">
+                  <div className="flex-shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-semibold">
                     5
                   </div>
                   <div>
@@ -185,7 +185,7 @@ Your public key has been saved in /home/username/.ssh/id_ed25519.pub`}
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-semibold">
+                  <div className="flex-shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-semibold">
                     6
                   </div>
                   <div>
@@ -214,7 +214,7 @@ Your public key has been saved in /home/username/.ssh/id_ed25519.pub`}
                 language="bash"
               />
 
-              <div className="mt-8 bg-slate-50 rounded-lg p-6 border border-slate-200">
+              <div className="mt-8 bg-muted rounded-lg p-6 border border-border">
                 <h3 className="font-semibold text-foreground mb-4">成功時の出力</h3>
                 <CodeBlock
                   code={`Hi username! You've successfully authenticated, but GitHub does not provide shell access.`}
@@ -299,7 +299,7 @@ git config --global core.sshCommand "ssh -i ~/.ssh/id_ed25519"`}
           </Button>
           <Button
             onClick={() => (window.location.href = '/advanced/github-cli')}
-            className="ml-auto flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white"
+            className="ml-auto flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground"
           >
             次へ
             <ChevronRight className="w-4 h-4" />

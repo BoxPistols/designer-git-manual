@@ -37,7 +37,7 @@ export default function LinuxBasics() {
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             ターミナルの基本
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               ターミナルは、コマンド（テキスト）でコンピュータに指示を出すツールです。GUI（マウスで操作する画面）と異なり、キーボードだけで操作します。
             </p>
@@ -57,7 +57,7 @@ export default function LinuxBasics() {
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             ファイルシステムの理解
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               Linux のファイルシステムは、ツリー構造になっています。最上位のディレクトリを「ルート」（<code className="bg-muted px-2 py-1 rounded text-primary">/</code>）と呼びます。
             </p>
@@ -82,7 +82,7 @@ export default function LinuxBasics() {
           </h2>
 
           {/* pwd */}
-          <div className="bg-white border border-border rounded-lg p-8 mb-6 space-y-4">
+          <div className="bg-card border border-border rounded-lg p-8 mb-6 space-y-4">
             <h3 className="text-xl font-semibold text-foreground">pwd - 現在のディレクトリを表示</h3>
             <CodeBlock
               code={`pwd`}
@@ -95,7 +95,7 @@ export default function LinuxBasics() {
           </div>
 
           {/* ls */}
-          <div className="bg-white border border-border rounded-lg p-8 mb-6 space-y-4">
+          <div className="bg-card border border-border rounded-lg p-8 mb-6 space-y-4">
             <h3 className="text-xl font-semibold text-foreground">ls - ファイル一覧を表示</h3>
             <CodeBlock
               code={`ls              # 現在のディレクトリのファイル一覧
@@ -110,7 +110,7 @@ ls -lh          # ファイルサイズを人間が読みやすい形式で表�
           </div>
 
           {/* cd */}
-          <div className="bg-white border border-border rounded-lg p-8 mb-6 space-y-4">
+          <div className="bg-card border border-border rounded-lg p-8 mb-6 space-y-4">
             <h3 className="text-xl font-semibold text-foreground">cd - ディレクトリを移動</h3>
             <CodeBlock
               code={`cd Documents    # Documents フォルダに移動
@@ -126,7 +126,7 @@ cd /            # ルートディレクトリに移動`}
           </div>
 
           {/* mkdir */}
-          <div className="bg-white border border-border rounded-lg p-8 mb-6 space-y-4">
+          <div className="bg-card border border-border rounded-lg p-8 mb-6 space-y-4">
             <h3 className="text-xl font-semibold text-foreground">mkdir - 新しいディレクトリを作成</h3>
             <CodeBlock
               code={`mkdir my-project        # my-project フォルダを作成
@@ -140,7 +140,7 @@ mkdir -p a/b/c          # ネストされたフォルダを作成`}
           </div>
 
           {/* touch */}
-          <div className="bg-white border border-border rounded-lg p-8 mb-6 space-y-4">
+          <div className="bg-card border border-border rounded-lg p-8 mb-6 space-y-4">
             <h3 className="text-xl font-semibold text-foreground">touch - 空のファイルを作成</h3>
             <CodeBlock
               code={`touch README.md         # README.md ファイルを作成
@@ -154,7 +154,7 @@ touch index.html        # index.html ファイルを作成`}
           </div>
 
           {/* cat */}
-          <div className="bg-white border border-border rounded-lg p-8 mb-6 space-y-4">
+          <div className="bg-card border border-border rounded-lg p-8 mb-6 space-y-4">
             <h3 className="text-xl font-semibold text-foreground">cat - ファイルの内容を表示</h3>
             <CodeBlock
               code={`cat README.md           # README.md の内容を表示
@@ -168,7 +168,7 @@ cat file1.txt file2.txt # 複数ファイルの内容を表示`}
           </div>
 
           {/* nano */}
-          <div className="bg-white border border-border rounded-lg p-8 mb-6 space-y-4">
+          <div className="bg-card border border-border rounded-lg p-8 mb-6 space-y-4">
             <h3 className="text-xl font-semibold text-foreground">nano - テキストエディタ</h3>
             <CodeBlock
               code={`nano README.md          # README.md をエディタで開く`}
@@ -181,7 +181,7 @@ cat file1.txt file2.txt # 複数ファイルの内容を表示`}
           </div>
 
           {/* rm */}
-          <div className="bg-white border border-border rounded-lg p-8 mb-6 space-y-4">
+          <div className="bg-card border border-border rounded-lg p-8 mb-6 space-y-4">
             <h3 className="text-xl font-semibold text-foreground">rm - ファイルを削除</h3>
             <CodeBlock
               code={`rm file.txt             # ファイルを削除
@@ -195,7 +195,7 @@ rm -r folder/           # フォルダとその中身を削除`}
           </div>
 
           {/* cp */}
-          <div className="bg-white border border-border rounded-lg p-8 mb-6 space-y-4">
+          <div className="bg-card border border-border rounded-lg p-8 mb-6 space-y-4">
             <h3 className="text-xl font-semibold text-foreground">cp - ファイルをコピー</h3>
             <CodeBlock
               code={`cp file.txt file_copy.txt       # ファイルをコピー
@@ -209,7 +209,7 @@ cp -r folder/ folder_copy/      # フォルダをコピー`}
           </div>
 
           {/* mv */}
-          <div className="bg-white border border-border rounded-lg p-8 space-y-4">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-4">
             <h3 className="text-xl font-semibold text-foreground">mv - ファイルを移動・名前変更</h3>
             <CodeBlock
               code={`mv file.txt new_name.txt       # ファイルを名前変更
@@ -229,7 +229,7 @@ mv old_folder/ new_folder/      # フォルダを移動・名前変更`}
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             ユーザーと権限
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               Linux では、ファイルやコマンドに対して「誰が何をできるか」という権限が設定されています。
             </p>
@@ -267,7 +267,7 @@ chmod 755 file.txt      # 権限を数値で指定`}
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             実践練習
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               以下の手順で、実際にコマンドを使ってみましょう。
             </p>
@@ -305,7 +305,7 @@ chmod 755 file.txt      # 権限を数値で指定`}
             </p>
             <Button
               onClick={() => (window.location.href = '/advanced/vscode')}
-              className="bg-primary hover:bg-primary/90 text-white"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground"
             >
               VSCode 導入へ進む
               <ArrowRight className="ml-2" size={20} />

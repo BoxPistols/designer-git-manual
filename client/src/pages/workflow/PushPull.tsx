@@ -46,7 +46,7 @@ export default function PushPull() {
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             ローカルとリモートの概念
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               Git では、2つの場所にリポジトリが存在します：
             </p>
@@ -97,16 +97,16 @@ export default function PushPull() {
 
           <div className="space-y-8">
             {/* Explanation */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Push は、ローカルで作成した Commit を GitHub にアップロードする操作です。これにより、他の人があなたの変更を見たり、パソコンが壊れた場合のバックアップになります。
               </p>
             </div>
 
             {/* Step 1: Push */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                   1
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -139,9 +139,9 @@ export default function PushPull() {
             </div>
 
             {/* Step 2: Verify Push */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                   2
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -173,16 +173,16 @@ export default function PushPull() {
 
           <div className="space-y-8">
             {/* Explanation */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Pull は、GitHub 上の最新の変更をローカルに取得する操作です。複数人での開発時に、他の人の変更を自分のパソコンに反映させるために使用します。
               </p>
             </div>
 
             {/* Step 1: Make Change on GitHub */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                   1
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -206,9 +206,9 @@ export default function PushPull() {
             </div>
 
             {/* Step 2: Pull */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                   2
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -231,9 +231,9 @@ export default function PushPull() {
             </div>
 
             {/* Step 3: Verify Pull */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                   3
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -256,7 +256,7 @@ export default function PushPull() {
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             Push と Pull のワークフロー
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               開発の基本的なワークフローは、以下のように繰り返されます：
             </p>

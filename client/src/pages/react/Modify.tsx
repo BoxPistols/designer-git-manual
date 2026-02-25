@@ -47,7 +47,7 @@ export default function ModifyReact() {
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             このセクションの目的
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               React の「ハローワールド」を作成することが目的ではなく、以下を実現することです：
             </p>
@@ -118,9 +118,9 @@ export default function ModifyReact() {
 
           <div className="space-y-8">
             {/* Step 1: Open App.js */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                   1
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -133,9 +133,9 @@ export default function ModifyReact() {
             </div>
 
             {/* Step 2: Edit Content */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                   2
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -167,9 +167,9 @@ export default function ModifyReact() {
             </div>
 
             {/* Step 3: Verify Changes */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                   3
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -195,9 +195,9 @@ export default function ModifyReact() {
 
           <div className="space-y-8">
             {/* Step 1: Initialize Git */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                   1
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -220,9 +220,9 @@ export default function ModifyReact() {
             </div>
 
             {/* Step 2: Check Status */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                   2
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -245,9 +245,9 @@ export default function ModifyReact() {
             </div>
 
             {/* Step 3: Create Branch */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                   3
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -266,9 +266,9 @@ export default function ModifyReact() {
             </div>
 
             {/* Step 4: Commit Changes */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                   4
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -291,9 +291,9 @@ export default function ModifyReact() {
             </div>
 
             {/* Step 5: View Diff */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                   5
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -320,9 +320,9 @@ export default function ModifyReact() {
             </div>
 
             {/* Step 6: Push and Create PR */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                   6
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -364,7 +364,7 @@ export default function ModifyReact() {
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             学習成果
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               このマニュアルを完了することで、以下のスキルを習得しました：
             </p>

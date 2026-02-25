@@ -36,7 +36,7 @@ export default function ClaudeCodeBasics() {
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             このページのゴール
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8">
+          <div className="bg-card border border-border rounded-lg p-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center">
                 <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
@@ -64,9 +64,9 @@ export default function ClaudeCodeBasics() {
         </section>
 
         {/* ステップ1: リポジトリに移動して Claude Code を起動 */}
-        <div className="bg-white border border-border rounded-lg p-8 mb-8 space-y-6">
+        <div className="bg-card border border-border rounded-lg p-8 mb-8 space-y-6">
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
               1
             </div>
             <h3 className="text-2xl font-semibold text-foreground">リポジトリに移動して Claude Code を起動する</h3>
@@ -103,7 +103,7 @@ claude`}
             自動的にプロジェクトフォルダにいる状態になっています。そのまま <code>claude</code> と入力するだけでOKです。
           </InfoBox>
 
-          <div className="bg-slate-50 border border-slate-200 rounded-lg p-4">
+          <div className="bg-muted border border-border rounded-lg p-4">
             <p className="text-foreground font-medium mb-2">Claude Code が認識する範囲</p>
             <p className="text-muted-foreground text-sm leading-relaxed">
               Claude Code は起動時のフォルダ以下のファイルを読み取れます。
@@ -113,9 +113,9 @@ claude`}
         </div>
 
         {/* ステップ2: リポジトリの状態を確認する */}
-        <div className="bg-white border border-border rounded-lg p-8 mb-8 space-y-6">
+        <div className="bg-card border border-border rounded-lg p-8 mb-8 space-y-6">
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
               2
             </div>
             <h3 className="text-2xl font-semibold text-foreground">リポジトリの状態を確認してもらう</h3>
@@ -151,9 +151,9 @@ claude`}
         </div>
 
         {/* ステップ3: 最新の状態を取得する（fetch / pull） */}
-        <div className="bg-white border border-border rounded-lg p-8 mb-8 space-y-6">
+        <div className="bg-card border border-border rounded-lg p-8 mb-8 space-y-6">
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
               3
             </div>
             <h3 className="text-2xl font-semibold text-foreground">最新の状態を取得する（fetch / pull）</h3>
@@ -177,10 +177,10 @@ claude`}
             title="Claude Code の対話画面"
           />
 
-          <div className="bg-slate-50 border border-slate-200 rounded-lg p-6 space-y-3">
+          <div className="bg-muted border border-border rounded-lg p-6 space-y-3">
             <p className="text-foreground font-medium">fetch と pull の違い（おさらい）</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-white rounded-lg p-4 border border-slate-200">
+              <div className="bg-card rounded-lg p-4 border border-border">
                 <p className="font-semibold text-foreground mb-1">
                   <GitBranch className="w-4 h-4 inline mr-1" />
                   git fetch
@@ -189,7 +189,7 @@ claude`}
                   リモートの情報を「確認」するだけ。自分のファイルは変わらない。安全な操作。
                 </p>
               </div>
-              <div className="bg-white rounded-lg p-4 border border-slate-200">
+              <div className="bg-card rounded-lg p-4 border border-border">
                 <p className="font-semibold text-foreground mb-1">
                   <RefreshCw className="w-4 h-4 inline mr-1" />
                   git pull
@@ -209,9 +209,9 @@ claude`}
         </div>
 
         {/* ステップ4: 画面で確認する */}
-        <div className="bg-white border border-border rounded-lg p-8 mb-8 space-y-6">
+        <div className="bg-card border border-border rounded-lg p-8 mb-8 space-y-6">
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
               4
             </div>
             <h3 className="text-2xl font-semibold text-foreground">画面で確認する</h3>
@@ -265,9 +265,9 @@ pnpm dev`}
         </div>
 
         {/* ステップ5: よく使う操作まとめ */}
-        <div className="bg-white border border-border rounded-lg p-8 mb-8 space-y-6">
+        <div className="bg-card border border-border rounded-lg p-8 mb-8 space-y-6">
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
               5
             </div>
             <h3 className="text-2xl font-semibold text-foreground">よく使う Claude Code 操作まとめ</h3>
@@ -279,7 +279,7 @@ pnpm dev`}
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
-                <tr className="bg-slate-50">
+                <tr className="bg-muted">
                   <th className="border border-border px-4 py-3 text-left text-foreground font-semibold">やりたいこと</th>
                   <th className="border border-border px-4 py-3 text-left text-foreground font-semibold">Claude Code への頼み方</th>
                 </tr>
@@ -293,7 +293,7 @@ pnpm dev`}
                   ['ファイルの中身を確認', 'index.html の内容を見せて'],
                   ['変更の取り消し', '直前の変更を元に戻して'],
                 ].map(([action, command], index) => (
-                  <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-slate-50/50'}>
+                  <tr key={index} className={index % 2 === 0 ? 'bg-card' : 'bg-muted/50'}>
                     <td className="border border-border px-4 py-3 text-foreground">{action}</td>
                     <td className="border border-border px-4 py-3 text-muted-foreground">
                       <code className="bg-muted px-1.5 py-0.5 rounded text-sm">{command}</code>
@@ -304,14 +304,14 @@ pnpm dev`}
             </table>
           </div>
 
-          <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
-            <p className="text-amber-800 font-medium mb-2">Claude Code の基本コマンド</p>
-            <div className="space-y-2 text-amber-700 text-sm">
-              <p><code className="bg-amber-100 px-1.5 py-0.5 rounded">claude</code> — Claude Code を起動</p>
-              <p><code className="bg-amber-100 px-1.5 py-0.5 rounded">/exit</code> — Claude Code を終了</p>
-              <p><code className="bg-amber-100 px-1.5 py-0.5 rounded">/help</code> — ヘルプを表示</p>
-              <p><code className="bg-amber-100 px-1.5 py-0.5 rounded">/clear</code> — 会話履歴をクリア</p>
-              <p><code className="bg-amber-100 px-1.5 py-0.5 rounded">Ctrl + C</code> — 処理を中断 / 終了</p>
+          <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg p-4">
+            <p className="text-amber-600 dark:text-amber-400 font-medium mb-2">Claude Code の基本コマンド</p>
+            <div className="space-y-2 text-amber-600 dark:text-amber-400 text-sm">
+              <p><code className="bg-amber-100 dark:bg-amber-900/50 px-1.5 py-0.5 rounded">claude</code> — Claude Code を起動</p>
+              <p><code className="bg-amber-100 dark:bg-amber-900/50 px-1.5 py-0.5 rounded">/exit</code> — Claude Code を終了</p>
+              <p><code className="bg-amber-100 dark:bg-amber-900/50 px-1.5 py-0.5 rounded">/help</code> — ヘルプを表示</p>
+              <p><code className="bg-amber-100 dark:bg-amber-900/50 px-1.5 py-0.5 rounded">/clear</code> — 会話履歴をクリア</p>
+              <p><code className="bg-amber-100 dark:bg-amber-900/50 px-1.5 py-0.5 rounded">Ctrl + C</code> — 処理を中断 / 終了</p>
             </div>
           </div>
         </div>
@@ -341,7 +341,7 @@ pnpm dev`}
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             このページのまとめ
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8">
+          <div className="bg-card border border-border rounded-lg p-8">
             <div className="space-y-3">
               {[
                 'リポジトリフォルダで Claude Code を起動できた',

@@ -36,7 +36,7 @@ export default function Prerequisites() {
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             Git とは何か
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               Git は、ファイルの変更履歴を管理するツール（バージョン管理システム）です。デザインファイルや文書を作成する際に「最終版」「最終版_v2」「最終版_v3」と複数のファイルを作成してしまった経験はありませんか？Git を使うと、そのような混乱を避けることができます。
             </p>
@@ -70,7 +70,7 @@ export default function Prerequisites() {
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             GitHub とは何か
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               GitHub は、Git で管理されたプロジェクトをクラウド上に保存・共有するサービスです。Git はローカル（自分のパソコン）でファイル管理をしますが、GitHub はそれをインターネット上に保存することで、複数人での協力や、パソコンが壊れた時のバックアップが可能になります。
             </p>
@@ -97,7 +97,7 @@ export default function Prerequisites() {
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             ターミナルの基本
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               ターミナル（コマンドラインインターフェース）は、マウスを使わずにキーボードでコンピュータに指示を出すツールです。Git や Node.js などの開発ツールはターミナルから操作することが多いため、基本的な使い方を理解しておくことが重要です。
             </p>
@@ -142,7 +142,7 @@ export default function Prerequisites() {
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             必要なツール一覧
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8">
+          <div className="bg-card border border-border rounded-lg p-8">
             <div className="space-y-4">
               <div className="flex gap-4 pb-4 border-b border-border">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center font-bold flex-shrink-0">

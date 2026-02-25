@@ -46,7 +46,7 @@ export default function CommitWorkflow() {
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             Commit とは
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               Commit は、ファイルの変更を Git に記録する操作です。「保存」ボタンを押すのと似ていますが、Git では変更内容とメッセージを一緒に記録します。これにより、後で「いつ、誰が、何を変更したか」を確認できます。
             </p>
@@ -83,9 +83,9 @@ export default function CommitWorkflow() {
 
           <div className="space-y-8">
             {/* Step 1 */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                   1
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -101,9 +101,9 @@ export default function CommitWorkflow() {
             </div>
 
             {/* Step 2 */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                   2
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -133,7 +133,7 @@ export default function CommitWorkflow() {
             Git ワークフロー：add → commit → push
           </h2>
 
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6 mb-8">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6 mb-8">
             <p className="text-lg text-muted-foreground leading-relaxed">
               Git でファイルを管理するには、以下の3つのステップを実行します：
             </p>
@@ -179,9 +179,9 @@ export default function CommitWorkflow() {
 
           <div className="space-y-8">
             {/* Step 1: git add */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                   1
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -214,9 +214,9 @@ export default function CommitWorkflow() {
             </div>
 
             {/* Step 2: git commit */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                   2
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -268,9 +268,9 @@ export default function CommitWorkflow() {
             </div>
 
             {/* Step 3: Verify Commit */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                   3
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground self-center">

@@ -42,7 +42,7 @@ export default function SubTools() {
             <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-semibold">ターミナル型</span>
           </div>
 
-          <div className="bg-white border border-border rounded-lg p-8 mb-6 space-y-4">
+          <div className="bg-card border border-border rounded-lg p-8 mb-6 space-y-4">
             <p className="text-lg text-muted-foreground leading-relaxed">
               Google が提供するターミナルベースの AI ツールです。
               Claude Code と同じ感覚で使えて、<strong className="text-foreground">1日1,000リクエストまで無料</strong>という太っ腹な無料枠が魅力です。
@@ -54,7 +54,7 @@ export default function SubTools() {
           </div>
 
           {/* Gemini CLI ステップ */}
-          <div className="bg-white border border-border rounded-lg p-8 mb-6 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 mb-6 space-y-6">
             <h3 className="text-xl font-semibold text-foreground">セットアップ手順</h3>
 
             <div className="space-y-6">
@@ -95,11 +95,11 @@ gemini`}
               </div>
             </div>
 
-            <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
-              <p className="text-amber-800 font-medium mb-1">終了方法</p>
-              <p className="text-amber-700 text-sm">
-                <code className="bg-amber-100 px-1.5 py-0.5 rounded">/exit</code> または{' '}
-                <code className="bg-amber-100 px-1.5 py-0.5 rounded">Ctrl + C</code>
+            <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg p-4">
+              <p className="text-amber-600 dark:text-amber-400 font-medium mb-1">終了方法</p>
+              <p className="text-amber-600 dark:text-amber-400 text-sm">
+                <code className="bg-amber-100 dark:bg-amber-900/50 px-1.5 py-0.5 rounded">/exit</code> または{' '}
+                <code className="bg-amber-100 dark:bg-amber-900/50 px-1.5 py-0.5 rounded">Ctrl + C</code>
               </p>
             </div>
           </div>
@@ -115,19 +115,19 @@ gemini`}
             <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-semibold">AI搭載ターミナル</span>
           </div>
 
-          <div className="bg-white border border-border rounded-lg p-8 mb-6 space-y-4">
+          <div className="bg-card border border-border rounded-lg p-8 mb-6 space-y-4">
             <p className="text-lg text-muted-foreground leading-relaxed">
               Warp は<strong className="text-foreground">AI 機能が組み込まれたモダンなターミナル</strong>です。
               ターミナル自体を Warp に置き換えることで、コマンド入力中に AI のサポートが受けられます。
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
+              <div className="bg-muted rounded-lg p-4 border border-border">
                 <p className="text-foreground font-medium mb-1">自然言語でコマンド生成</p>
                 <p className="text-sm text-muted-foreground">
                   <code className="bg-muted px-1 py-0.5 rounded">#</code> を打って「ファイルを検索」と入力 → AI がコマンドを生成
                 </p>
               </div>
-              <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
+              <div className="bg-muted rounded-lg p-4 border border-border">
                 <p className="text-foreground font-medium mb-1">エラー解析</p>
                 <p className="text-sm text-muted-foreground">
                   エラーが出たら右クリック →「Ask Warp AI」で原因を AI が解説
@@ -137,7 +137,7 @@ gemini`}
           </div>
 
           {/* Warp ステップ */}
-          <div className="bg-white border border-border rounded-lg p-8 mb-6 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 mb-6 space-y-6">
             <h3 className="text-xl font-semibold text-foreground">セットアップ手順</h3>
 
             <div className="space-y-4">
@@ -204,7 +204,7 @@ gemini`}
             <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-semibold">クラウド IDE</span>
           </div>
 
-          <div className="bg-white border border-border rounded-lg p-8 mb-6 space-y-4">
+          <div className="bg-card border border-border rounded-lg p-8 mb-6 space-y-4">
             <p className="text-lg text-muted-foreground leading-relaxed">
               Google が提供する<strong className="text-foreground">ブラウザで動く AI 開発環境</strong>です。
               インストール不要で、ブラウザさえあればどの PC からでもアクセスできます。
@@ -216,7 +216,7 @@ gemini`}
             </InfoBox>
           </div>
 
-          <div className="bg-white border border-border rounded-lg p-8 mb-6 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 mb-6 space-y-6">
             <h3 className="text-xl font-semibold text-foreground">始め方</h3>
 
             <div className="space-y-4">
@@ -294,8 +294,8 @@ gemini`}
                 { tool: 'Warp', reason: 'ターミナル自体のAI補助。コマンドが思い出せない時に' },
                 { tool: 'Antigravity', reason: 'ブラウザで完結。PC を問わず作業できる' },
               ].map((item, index) => (
-                <div key={index} className="flex items-start gap-3 bg-white rounded-lg p-4 border border-border">
-                  <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                <div key={index} className="flex items-start gap-3 bg-card rounded-lg p-4 border border-border">
+                  <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-sm flex-shrink-0">
                     {index + 1}
                   </div>
                   <div>
@@ -318,7 +318,7 @@ gemini`}
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             このページのまとめ
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8">
+          <div className="bg-card border border-border rounded-lg p-8">
             <div className="space-y-3">
               {[
                 'Gemini CLI をインストールして動作確認した',

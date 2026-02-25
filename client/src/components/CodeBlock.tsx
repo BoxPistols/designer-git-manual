@@ -31,9 +31,9 @@ export default function CodeBlock({
         <div className="flex items-center justify-between px-4 py-3 bg-slate-800 border-b border-slate-700">
           <div className="flex items-center gap-2">
             {language && (
-              <span className="text-xs font-mono text-slate-400 uppercase">{language}</span>
+              <span className="text-xs font-mono text-slate-200 uppercase">{language}</span>
             )}
-            {title && <span className="text-sm font-medium text-slate-300">{title}</span>}
+            {title && <span className="text-sm font-medium text-slate-200">{title}</span>}
           </div>
           <button
             onClick={handleCopy}
@@ -43,7 +43,7 @@ export default function CodeBlock({
             {copied ? (
               <Check size={16} className="text-secondary" />
             ) : (
-              <Copy size={16} className="text-slate-400" />
+              <Copy size={16} className="text-slate-200" />
             )}
           </button>
         </div>
@@ -55,7 +55,7 @@ export default function CodeBlock({
           {lines.map((line, index) => (
             <div key={index} className="flex">
               {showLineNumbers && (
-                <span className="inline-block w-8 text-right pr-4 text-slate-500 select-none">
+                <span className="inline-block w-8 text-right pr-4 text-slate-400 select-none">
                   {index + 1}
                 </span>
               )}

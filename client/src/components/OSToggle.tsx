@@ -19,7 +19,7 @@ export default function OSToggle({ onOSChange }: OSToggleProps) {
         onClick={() => handleOSChange('mac')}
         className={`flex items-center gap-2 px-4 py-2 rounded-md transition-all font-medium ${
           selectedOS === 'mac'
-            ? 'bg-white text-primary shadow-sm'
+            ? 'bg-card text-primary shadow-sm'
             : 'text-muted-foreground hover:text-foreground'
         }`}
       >
@@ -30,7 +30,7 @@ export default function OSToggle({ onOSChange }: OSToggleProps) {
         onClick={() => handleOSChange('windows')}
         className={`flex items-center gap-2 px-4 py-2 rounded-md transition-all font-medium ${
           selectedOS === 'windows'
-            ? 'bg-white text-primary shadow-sm'
+            ? 'bg-card text-primary shadow-sm'
             : 'text-muted-foreground hover:text-foreground'
         }`}
       >

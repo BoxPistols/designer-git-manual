@@ -46,7 +46,7 @@ export default function ReactSetup() {
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             React とは
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               React は、Facebook が開発した JavaScript ライブラリです。Web ページのインタラクティブな部分（ボタンをクリックしたときの動作など）を簡単に実装できます。
             </p>
@@ -90,9 +90,9 @@ export default function ReactSetup() {
 
           <div className="space-y-8">
             {/* Step 1: Create Project */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                   1
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -127,9 +127,9 @@ export default function ReactSetup() {
             </div>
 
             {/* Step 2: Navigate to Project */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                   2
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -148,9 +148,9 @@ export default function ReactSetup() {
             </div>
 
             {/* Step 3: Open in Cursor */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                   3
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -178,9 +178,9 @@ export default function ReactSetup() {
 
           <div className="space-y-8">
             {/* Step 1: Start Server */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                   1
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -207,9 +207,9 @@ export default function ReactSetup() {
             </div>
 
             {/* Step 2: Verify Server */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                   2
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -236,7 +236,7 @@ export default function ReactSetup() {
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             React プロジェクトの構造
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               create-react-app で作成されたプロジェクトの主要なファイル・フォルダは以下の通りです：
             </p>

@@ -1,16 +1,17 @@
 import { useLocation } from 'wouter';
-import { ArrowRight, CheckCircle2, Zap, Users, BookOpen } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Zap, Users, BookOpen, Keyboard } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useOS } from '@/contexts/OSContext';
+import { modKey, ctrlKey } from '@/lib/keyLabels';
 
 /**
  * ホームページ - ランディング
- * デザイン方針: ジャーニーマップ - 段階的な進行を視覚的に表現
- * - 大きなヒーロー領域で学習の全体像を表示
- * - 学習フロー全体を視覚的に表現
- * - 各セクションへの明確なナビゲーション
  */
 
 export default function Home() {
+  const { selectedOS } = useOS();
+  const isMac = selectedOS === 'mac';
+
   const learningPath = [
     {
       number: 1,
@@ -65,6 +66,14 @@ export default function Home() {
     },
   ];
 
+  const shortcuts = [
+    { keys: `${modKey(isMac)}+K`, description: 'ページ検索' },
+    { keys: `${ctrlKey(isMac)}+↓`, description: '次のページへ移動' },
+    { keys: `${ctrlKey(isMac)}+↑`, description: '前のページへ移動' },
+    { keys: `Shift+${ctrlKey(isMac)}+↓`, description: '次のセクションへ移動' },
+    { keys: `Shift+${ctrlKey(isMac)}+↑`, description: '前のセクションへ移動' },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -95,7 +104,7 @@ export default function Home() {
           </div>
 
           {/* Learning Duration */}
-          <div className="inline-block bg-white border border-border rounded-lg px-6 py-3">
+          <div className="inline-block bg-card border border-border rounded-lg px-6 py-3">
             <p className="text-sm text-muted-foreground">
               <span className="font-semibold text-foreground">総学習時間：</span> 約 2 時間 45 分
             </p>
@@ -106,7 +115,7 @@ export default function Home() {
       {/* Learning Path Section */}
       <section className="py-16 px-4 md:px-8">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-poppins font-bold text-center mb-12">学習フロー</h2>
+          <h2 className="text-3xl font-poppins font-bold text-center text-foreground mb-12">学習フロー</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {learningPath.map((step, index) => (
@@ -120,11 +129,11 @@ export default function Home() {
                 )}
 
                 {/* Card */}
-                <div className="bg-white border border-border rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="bg-card border border-border rounded-xl p-6 hover:shadow-lg transition-shadow">
                   {/* Step Number */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-                      <span className="text-white font-poppins font-bold text-lg">
+                      <span className="text-primary-foreground font-poppins font-bold text-lg">
                         {step.number}
                       </span>
                     </div>
@@ -150,9 +159,9 @@ export default function Home() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 px-4 md:px-8 bg-white">
+      <section className="py-16 px-4 md:px-8 bg-card">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-poppins font-bold text-center mb-12">
+          <h2 className="text-3xl font-poppins font-bold text-center text-foreground mb-12">
             このガイドの特徴
           </h2>
 
@@ -172,6 +181,38 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Keyboard Shortcuts Section */}
+      <section className="py-16 px-4 md:px-8">
+        <div className="max-w-3xl mx-auto">
+          <div className="flex items-center gap-3 mb-8 justify-center">
+            <Keyboard className="w-6 h-6 text-primary" />
+            <h2 className="text-2xl font-poppins font-bold text-foreground">キーボードショートカット</h2>
+          </div>
+          <div className="bg-card border border-border rounded-xl overflow-hidden">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-border bg-muted/50">
+                  <th className="text-left px-6 py-3 font-semibold text-foreground">キー</th>
+                  <th className="text-left px-6 py-3 font-semibold text-foreground">動作</th>
+                </tr>
+              </thead>
+              <tbody>
+                {shortcuts.map((s, i) => (
+                  <tr key={i} className="border-b border-border last:border-b-0">
+                    <td className="px-6 py-3">
+                      <kbd className="inline-flex items-center px-2 py-1 rounded bg-muted border border-border text-xs font-mono font-medium text-foreground">
+                        {s.keys}
+                      </kbd>
+                    </td>
+                    <td className="px-6 py-3 text-muted-foreground">{s.description}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </section>

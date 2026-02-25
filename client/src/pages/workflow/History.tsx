@@ -46,7 +46,7 @@ export default function HistoryWorkflow() {
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             差分・履歴を確認する理由
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               Git で管理されたファイルは、すべての変更履歴が記録されています。これにより、以下のことができます：
             </p>
@@ -111,16 +111,16 @@ export default function HistoryWorkflow() {
 
           <div className="space-y-8">
             {/* Explanation */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <p className="text-lg text-muted-foreground leading-relaxed">
                 git log コマンドは、すべての Commit 履歴を表示します。「いつ、誰が、何を変更したか」を確認できます。
               </p>
             </div>
 
             {/* Step 1: View Log */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                   1
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -153,9 +153,9 @@ export default function HistoryWorkflow() {
             </div>
 
             {/* Step 2: Detailed Log */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                   2
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -184,9 +184,9 @@ export default function HistoryWorkflow() {
             </div>
 
             {/* Step 3: One-line Log */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                   3
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -224,16 +224,16 @@ export default function HistoryWorkflow() {
 
           <div className="space-y-8">
             {/* Explanation */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <p className="text-lg text-muted-foreground leading-relaxed">
                 git diff コマンドは、現在のファイルと前の Commit の差分を表示します。「何が追加され、何が削除されたか」を確認できます。
               </p>
             </div>
 
             {/* Step 1: Make Change */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                   1
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -256,9 +256,9 @@ export default function HistoryWorkflow() {
             </div>
 
             {/* Step 2: View Diff */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                   2
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -301,16 +301,16 @@ export default function HistoryWorkflow() {
 
           <div className="space-y-8">
             {/* Explanation */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <p className="text-lg text-muted-foreground leading-relaxed">
                 GitHub の Web UI を使うと、より視覚的に履歴と差分を確認できます。
               </p>
             </div>
 
             {/* Step 1: View Commits */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                   1
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -329,9 +329,9 @@ export default function HistoryWorkflow() {
             </div>
 
             {/* Step 2: View Commit Details */}
-            <div className="bg-white border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8">
               <div className="flex gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
                   2
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground self-center">
@@ -360,7 +360,7 @@ export default function HistoryWorkflow() {
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             セルフレビューの重要性
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               自分の変更を確認（セルフレビュー）することは、品質を保証するために重要です。Commit を Push する前に、以下を確認しましょう：
             </p>

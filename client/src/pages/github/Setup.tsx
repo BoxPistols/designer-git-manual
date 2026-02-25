@@ -46,7 +46,7 @@ export default function GitSetup() {
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             Git ユーザー情報を設定
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               Git を使う前に、ユーザー情報を設定する必要があります。これは、コミット（変更の記録）を作成する際に、誰が変更したかを記録するためです。
             </p>
@@ -102,7 +102,7 @@ export default function GitSetup() {
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             SSH キーを生成・登録
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               SSH キーは、GitHub とローカルの Git を安全に連携させるための暗号化キーです。SSH キーを使うことで、毎回パスワードを入力しなくても GitHub にアクセスできます。
             </p>
@@ -220,7 +220,7 @@ export default function GitSetup() {
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             トラブルシューティング
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <div className="space-y-4">
               <h3 className="font-semibold text-foreground">
                 「Permission denied (publickey)」と表示される場合

@@ -36,7 +36,7 @@ export default function Integration() {
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             インストール確認
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               以下のコマンドを実行して、すべてのツールが正しくインストールされたか確認しましょう。
             </p>
@@ -104,9 +104,9 @@ npm --version`}
           </h2>
 
           {/* Step 1 */}
-          <div className="bg-white border border-border rounded-lg p-8 mb-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 mb-8 space-y-6">
             <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
                 1
               </div>
               <h3 className="text-2xl font-semibold text-foreground">
@@ -125,9 +125,9 @@ cd my-first-project`}
           </div>
 
           {/* Step 2 */}
-          <div className="bg-white border border-border rounded-lg p-8 mb-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 mb-8 space-y-6">
             <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
                 2
               </div>
               <h3 className="text-2xl font-semibold text-foreground">
@@ -148,9 +148,9 @@ cd my-first-project`}
           </div>
 
           {/* Step 3 */}
-          <div className="bg-white border border-border rounded-lg p-8 mb-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 mb-8 space-y-6">
             <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
                 3
               </div>
               <h3 className="text-2xl font-semibold text-foreground">
@@ -169,9 +169,9 @@ echo "# My First Project" > README.md`}
           </div>
 
           {/* Step 4 */}
-          <div className="bg-white border border-border rounded-lg p-8 mb-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 mb-8 space-y-6">
             <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
                 4
               </div>
               <h3 className="text-2xl font-semibold text-foreground">
@@ -192,9 +192,9 @@ echo "# My First Project" > README.md`}
           </div>
 
           {/* Step 5 */}
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
                 5
               </div>
               <h3 className="text-2xl font-semibold text-foreground">
@@ -221,14 +221,14 @@ git commit -m "Initial commit: Add README"`}
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             実践的な開発フロー
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               これからの開発は、以下のフローで進めていきます。
             </p>
 
             <div className="space-y-4">
               <div className="flex gap-4">
-                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold flex-shrink-0">
+                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold flex-shrink-0">
                   1
                 </div>
                 <div>
@@ -238,7 +238,7 @@ git commit -m "Initial commit: Add README"`}
               </div>
 
               <div className="flex gap-4">
-                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold flex-shrink-0">
+                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold flex-shrink-0">
                   2
                 </div>
                 <div>
@@ -250,7 +250,7 @@ git commit -m "Initial commit: Add README"`}
               </div>
 
               <div className="flex gap-4">
-                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold flex-shrink-0">
+                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold flex-shrink-0">
                   3
                 </div>
                 <div>
@@ -262,7 +262,7 @@ git commit -m "Initial commit: Add README"`}
               </div>
 
               <div className="flex gap-4">
-                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold flex-shrink-0">
+                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold flex-shrink-0">
                   4
                 </div>
                 <div>
@@ -274,7 +274,7 @@ git commit -m "Initial commit: Add README"`}
               </div>
 
               <div className="flex gap-4">
-                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold flex-shrink-0">
+                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold flex-shrink-0">
                   5
                 </div>
                 <div>
@@ -297,7 +297,7 @@ git commit -m "Initial commit: Add README"`}
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             Cursor vs VSCode - 使い分け
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               Cursor と VSCode は異なるエディタですが、どちらでも開発できます。以下の基準で使い分けることをお勧めします。
             </p>

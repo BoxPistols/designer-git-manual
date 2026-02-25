@@ -47,7 +47,7 @@ export default function WSL2Setup() {
               <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
                 WSL2 とは
               </h2>
-              <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+              <div className="bg-card border border-border rounded-lg p-8 space-y-6">
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   WSL2（Windows Subsystem for Linux 2）は、Windows 上で Linux 環境を動かすための技術です。仮想マシンのような重さがなく、ネイティブに近い性能で Linux コマンドを使用できます。
                 </p>
@@ -80,7 +80,7 @@ export default function WSL2Setup() {
               <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
                 前提条件
               </h2>
-              <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+              <div className="bg-card border border-border rounded-lg p-8 space-y-6">
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   WSL2 を使用するには、以下の条件を満たす必要があります。
                 </p>
@@ -108,9 +108,9 @@ export default function WSL2Setup() {
               </h2>
 
               {/* Step 1 */}
-              <div className="bg-white border border-border rounded-lg p-8 mb-8 space-y-6">
+              <div className="bg-card border border-border rounded-lg p-8 mb-8 space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
                     1
                   </div>
                   <h3 className="text-2xl font-semibold text-foreground">
@@ -126,9 +126,9 @@ export default function WSL2Setup() {
               </div>
 
               {/* Step 2 */}
-              <div className="bg-white border border-border rounded-lg p-8 mb-8 space-y-6">
+              <div className="bg-card border border-border rounded-lg p-8 mb-8 space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
                     2
                   </div>
                   <h3 className="text-2xl font-semibold text-foreground">
@@ -149,9 +149,9 @@ export default function WSL2Setup() {
               </div>
 
               {/* Step 3 */}
-              <div className="bg-white border border-border rounded-lg p-8 mb-8 space-y-6">
+              <div className="bg-card border border-border rounded-lg p-8 mb-8 space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
                     3
                   </div>
                   <h3 className="text-2xl font-semibold text-foreground">
@@ -174,9 +174,9 @@ Retype new password:`}
               </div>
 
               {/* Step 4 */}
-              <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+              <div className="bg-card border border-border rounded-lg p-8 space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
                     4
                   </div>
                   <h3 className="text-2xl font-semibold text-foreground">
@@ -203,7 +203,7 @@ Retype new password:`}
                 トラブルシューティング
               </h2>
               <div className="space-y-6">
-                <div className="bg-white border border-border rounded-lg p-8">
+                <div className="bg-card border border-border rounded-lg p-8">
                   <h3 className="text-xl font-semibold text-foreground mb-4">
                     「仮想化が有効ではありません」というエラーが出る場合
                   </h3>
@@ -218,7 +218,7 @@ Retype new password:`}
                   </ol>
                 </div>
 
-                <div className="bg-white border border-border rounded-lg p-8">
+                <div className="bg-card border border-border rounded-lg p-8">
                   <h3 className="text-xl font-semibold text-foreground mb-4">
                     Ubuntu が起動しない場合
                   </h3>
@@ -246,7 +246,7 @@ wsl --install -d Ubuntu`}
                 </p>
                 <Button
                   onClick={() => (window.location.href = '/advanced/linux-basics')}
-                  className="bg-primary hover:bg-primary/90 text-white"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground"
                 >
                   Linux/Ubuntu 基礎へ進む
                   <ArrowRight className="ml-2" size={20} />
@@ -255,7 +255,7 @@ wsl --install -d Ubuntu`}
             </section>
           </>
         ) : (
-          <div className="bg-white border border-border rounded-lg p-8">
+          <div className="bg-card border border-border rounded-lg p-8">
             <div className="flex items-start gap-4">
               <AlertCircle className="text-accent flex-shrink-0 mt-1" size={24} />
               <div>
@@ -270,7 +270,7 @@ wsl --install -d Ubuntu`}
                 </p>
                 <Button
                   onClick={() => (window.location.href = '/advanced/linux-basics')}
-                  className="mt-6 bg-primary hover:bg-primary/90 text-white"
+                  className="mt-6 bg-primary hover:bg-primary/90 text-primary-foreground"
                 >
                   Linux/Ubuntu 基礎へ進む
                   <ArrowRight className="ml-2" size={20} />

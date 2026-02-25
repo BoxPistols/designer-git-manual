@@ -37,7 +37,7 @@ export default function CursorCline() {
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             Cursor とは？
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               Cursor は、<strong className="text-foreground">AI が組み込まれたコードエディタ</strong>です。
               見た目は VS Code とほぼ同じですが、エディタの中で直接 AI と対話しながらコーディングできます。
@@ -61,78 +61,31 @@ export default function CursorCline() {
           </div>
         </section>
 
-        {/* ステップ1: Cursor インストール */}
-        <div className="bg-white border border-border rounded-lg p-8 mb-8 space-y-6">
+        {/* ステップ1: Cursor 確認 */}
+        <div className="bg-card border border-border rounded-lg p-8 mb-8 space-y-6">
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
               1
             </div>
-            <h3 className="text-2xl font-semibold text-foreground">Cursor をインストールする</h3>
-          </div>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            このマニュアルの「環境準備」で既に Cursor をインストール済みの方は、このステップをスキップしてOKです。
-          </p>
-
-          <div className="space-y-4">
-            <div className="flex items-start gap-3">
-              <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-xs font-bold mt-0.5">
-                a
-              </div>
-              <div>
-                <p className="text-foreground font-medium">公式サイトにアクセス</p>
-                <p className="text-muted-foreground">
-                  ブラウザで{' '}
-                  <a
-                    href="https://cursor.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:underline font-medium"
-                  >
-                    cursor.com
-                  </a>
-                  {' '}を開き、「Download」をクリック。
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-3">
-              <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-xs font-bold mt-0.5">
-                b
-              </div>
-              <div>
-                <p className="text-foreground font-medium">インストーラーを実行</p>
-                <p className="text-muted-foreground">
-                  {selectedOS === 'mac'
-                    ? 'ダウンロードした .dmg ファイルを開き、Cursor を Applications フォルダにドラッグ&ドロップします。'
-                    : 'ダウンロードした .exe ファイルを実行し、画面の指示に従ってインストールします。'}
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-3">
-              <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-xs font-bold mt-0.5">
-                c
-              </div>
-              <div>
-                <p className="text-foreground font-medium">アカウントを作成してログイン</p>
-                <p className="text-muted-foreground">
-                  初回起動時に Sign Up を求められます。Google アカウントまたはメールアドレスで登録します。
-                  <strong> 無料プラン（Hobby）</strong>を選択してください。
-                </p>
-              </div>
-            </div>
+            <h3 className="text-2xl font-semibold text-foreground">Cursor を準備する</h3>
           </div>
 
-          <InfoBox type="info" title="Cursor 無料プランの内容">
-            月50回のプレミアムリクエスト（高性能モデル）、コード補完、エージェント機能の限定利用が含まれます。
-            カジュアルな使い方なら十分な量です。
+          <InfoBox type="info" title="Cursor のインストールがまだの方">
+            <a href="/environment/cursor" className="text-primary hover:underline font-medium">
+              環境準備 → Cursor インストール
+            </a>
+            のページで、ダウンロードからアカウント作成までの手順を説明しています。先にそちらを完了してください。
           </InfoBox>
+
+          <p className="text-muted-foreground">
+            Cursor がインストール済みであれば、次のステップに進みましょう。
+          </p>
         </div>
 
         {/* ステップ2: Cursor で AI を使ってみる */}
-        <div className="bg-white border border-border rounded-lg p-8 mb-8 space-y-6">
+        <div className="bg-card border border-border rounded-lg p-8 mb-8 space-y-6">
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
               2
             </div>
             <h3 className="text-2xl font-semibold text-foreground">Cursor で AI を使ってみる</h3>
@@ -142,7 +95,7 @@ export default function CursorCline() {
           </p>
 
           <div className="space-y-4">
-            <div className="bg-slate-50 border border-slate-200 rounded-lg p-4">
+            <div className="bg-muted border border-border rounded-lg p-4">
               <p className="text-foreground font-medium mb-2">方法1: チャットパネルを開く</p>
               <p className="text-muted-foreground text-sm">
                 キーボードで{' '}
@@ -154,7 +107,7 @@ export default function CursorCline() {
               </p>
             </div>
 
-            <div className="bg-slate-50 border border-slate-200 rounded-lg p-4">
+            <div className="bg-muted border border-border rounded-lg p-4">
               <p className="text-foreground font-medium mb-2">方法2: インラインで指示する</p>
               <p className="text-muted-foreground text-sm">
                 コード上で{' '}
@@ -166,7 +119,7 @@ export default function CursorCline() {
               </p>
             </div>
 
-            <div className="bg-slate-50 border border-slate-200 rounded-lg p-4">
+            <div className="bg-muted border border-border rounded-lg p-4">
               <p className="text-foreground font-medium mb-2">方法3: Agent モード</p>
               <p className="text-muted-foreground text-sm">
                 チャットパネルで「Agent」モードを選択すると、
@@ -187,7 +140,7 @@ export default function CursorCline() {
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             Cline とは？
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               Cline は、<strong className="text-foreground">VS Code に追加できる無料の AI 拡張機能</strong>です。
               VS Code を既に使っている方は、拡張機能を入れるだけですぐに使えます。
@@ -212,9 +165,9 @@ export default function CursorCline() {
         </section>
 
         {/* ステップ3: Cline インストール */}
-        <div className="bg-white border border-border rounded-lg p-8 mb-8 space-y-6">
+        <div className="bg-card border border-border rounded-lg p-8 mb-8 space-y-6">
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
               3
             </div>
             <h3 className="text-2xl font-semibold text-foreground">Cline を VS Code にインストールする</h3>
@@ -277,9 +230,9 @@ export default function CursorCline() {
         </div>
 
         {/* ステップ4: Cline を使ってみる */}
-        <div className="bg-white border border-border rounded-lg p-8 mb-8 space-y-6">
+        <div className="bg-card border border-border rounded-lg p-8 mb-8 space-y-6">
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
               4
             </div>
             <h3 className="text-2xl font-semibold text-foreground">Cline を使ってみる</h3>
@@ -315,11 +268,11 @@ index.html の内容を確認して`}
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             Cursor と Cline、どっちを使う？
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8">
+          <div className="bg-card border border-border rounded-lg p-8">
             <div className="overflow-x-auto">
               <table className="w-full border-collapse text-sm">
                 <thead>
-                  <tr className="bg-slate-50">
+                  <tr className="bg-muted">
                     <th className="border border-border px-3 py-2.5 text-left text-foreground font-semibold">比較項目</th>
                     <th className="border border-border px-3 py-2.5 text-left text-foreground font-semibold">Cursor</th>
                     <th className="border border-border px-3 py-2.5 text-left text-foreground font-semibold">Cline</th>
@@ -332,7 +285,7 @@ index.html の内容を確認して`}
                     ['操作感', 'チャット + インライン編集', 'チャット中心'],
                     ['おすすめの人', '新しくエディタを入れてOKな人', '既に VS Code を使っている人'],
                   ].map(([item, cursor, cline], index) => (
-                    <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-slate-50/50'}>
+                    <tr key={index} className={index % 2 === 0 ? 'bg-card' : 'bg-muted/50'}>
                       <td className="border border-border px-3 py-2.5 font-medium text-foreground">{item}</td>
                       <td className="border border-border px-3 py-2.5 text-muted-foreground">{cursor}</td>
                       <td className="border border-border px-3 py-2.5 text-muted-foreground">{cline}</td>
@@ -352,7 +305,7 @@ index.html の内容を確認して`}
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             このページのまとめ
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8">
+          <div className="bg-card border border-border rounded-lg p-8">
             <div className="space-y-3">
               {[
                 'Cursor をインストールして AI チャットを試した',

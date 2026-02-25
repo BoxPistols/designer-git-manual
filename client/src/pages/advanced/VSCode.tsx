@@ -46,7 +46,7 @@ export default function VSCodeSetup() {
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             VSCode とは
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               VSCode（Visual Studio Code）は、Microsoft が開発した無料のコードエディタです。軽量で高速、拡張機能が豊富で、プロの開発者からも愛用されています。
             </p>
@@ -89,9 +89,9 @@ export default function VSCodeSetup() {
 
           {selectedOS === 'mac' ? (
             <>
-              <div className="bg-white border border-border rounded-lg p-8 mb-8 space-y-6">
+              <div className="bg-card border border-border rounded-lg p-8 mb-8 space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
                     1
                   </div>
                   <h3 className="text-2xl font-semibold text-foreground">
@@ -110,9 +110,9 @@ export default function VSCodeSetup() {
                 </div>
               </div>
 
-              <div className="bg-white border border-border rounded-lg p-8 mb-8 space-y-6">
+              <div className="bg-card border border-border rounded-lg p-8 mb-8 space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
                     2
                   </div>
                   <h3 className="text-2xl font-semibold text-foreground">
@@ -127,9 +127,9 @@ export default function VSCodeSetup() {
                 </InfoBox>
               </div>
 
-              <div className="bg-white border border-border rounded-lg p-8 mb-8 space-y-6">
+              <div className="bg-card border border-border rounded-lg p-8 mb-8 space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
                     3
                   </div>
                   <h3 className="text-2xl font-semibold text-foreground">
@@ -146,9 +146,9 @@ export default function VSCodeSetup() {
                 </ol>
               </div>
 
-              <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+              <div className="bg-card border border-border rounded-lg p-8 space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
                     4
                   </div>
                   <h3 className="text-2xl font-semibold text-foreground">
@@ -162,9 +162,9 @@ export default function VSCodeSetup() {
             </>
           ) : (
             <>
-              <div className="bg-white border border-border rounded-lg p-8 mb-8 space-y-6">
+              <div className="bg-card border border-border rounded-lg p-8 mb-8 space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
                     1
                   </div>
                   <h3 className="text-2xl font-semibold text-foreground">
@@ -183,9 +183,9 @@ export default function VSCodeSetup() {
                 </div>
               </div>
 
-              <div className="bg-white border border-border rounded-lg p-8 mb-8 space-y-6">
+              <div className="bg-card border border-border rounded-lg p-8 mb-8 space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
                     2
                   </div>
                   <h3 className="text-2xl font-semibold text-foreground">
@@ -197,9 +197,9 @@ export default function VSCodeSetup() {
                 </p>
               </div>
 
-              <div className="bg-white border border-border rounded-lg p-8 mb-8 space-y-6">
+              <div className="bg-card border border-border rounded-lg p-8 mb-8 space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
                     3
                   </div>
                   <h3 className="text-2xl font-semibold text-foreground">
@@ -214,9 +214,9 @@ export default function VSCodeSetup() {
                 </InfoBox>
               </div>
 
-              <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+              <div className="bg-card border border-border rounded-lg p-8 space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
                     4
                   </div>
                   <h3 className="text-2xl font-semibold text-foreground">
@@ -236,7 +236,7 @@ export default function VSCodeSetup() {
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             おすすめの拡張機能
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               VSCode の拡張機能を追加することで、開発効率が大幅に向上します。以下のおすすめ拡張機能をインストールしましょう。
             </p>
@@ -280,7 +280,7 @@ export default function VSCodeSetup() {
             <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
               WSL2 との統合（Windows ユーザー向け）
             </h2>
-            <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+            <div className="bg-card border border-border rounded-lg p-8 space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
                 VSCode を WSL2 と統合することで、Windows から Linux 環境のプロジェクトをシームレスに編集できます。
               </p>
@@ -321,7 +321,7 @@ export default function VSCodeSetup() {
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             ターミナル統合
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               VSCode には統合ターミナルがあり、エディタを離れずにコマンドを実行できます。
             </p>
@@ -357,7 +357,7 @@ node app.js`}
             </p>
             <Button
               onClick={() => (window.location.href = '/advanced/integration')}
-              className="bg-primary hover:bg-primary/90 text-white"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground"
             >
               開発環境の統合へ進む
               <ArrowRight className="ml-2" size={20} />

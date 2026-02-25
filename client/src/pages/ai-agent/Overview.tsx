@@ -29,7 +29,7 @@ export default function AIAgentOverview() {
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             AI コーディングツールって何？
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               AI コーディングツールとは、<strong className="text-foreground">AIに話しかけるだけでコードを書いたり、修正したり、質問に答えてもらえる</strong>ツールのことです。
             </p>
@@ -37,19 +37,19 @@ export default function AIAgentOverview() {
               例えば、こんなことができます:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
+              <div className="bg-muted rounded-lg p-4 border border-border">
                 <p className="text-foreground font-medium mb-1">「ボタンの色を赤に変えて」</p>
                 <p className="text-sm text-muted-foreground">→ AI がコードを見つけて自動で修正</p>
               </div>
-              <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
+              <div className="bg-muted rounded-lg p-4 border border-border">
                 <p className="text-foreground font-medium mb-1">「このエラーの原因は？」</p>
                 <p className="text-sm text-muted-foreground">→ AI がコードを分析して原因を説明</p>
               </div>
-              <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
+              <div className="bg-muted rounded-lg p-4 border border-border">
                 <p className="text-foreground font-medium mb-1">「最新のコードを取得して」</p>
                 <p className="text-sm text-muted-foreground">→ AI が git pull を実行してくれる</p>
               </div>
-              <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
+              <div className="bg-muted rounded-lg p-4 border border-border">
                 <p className="text-foreground font-medium mb-1">「ログインページを作って」</p>
                 <p className="text-sm text-muted-foreground">→ AI がファイルを作成してコードを生成</p>
               </div>
@@ -68,7 +68,7 @@ export default function AIAgentOverview() {
             ツールは3タイプある
           </h2>
           <div className="space-y-4">
-            <div className="bg-white border border-border rounded-lg p-6">
+            <div className="bg-card border border-border rounded-lg p-6">
               <div className="flex items-center gap-4 mb-3">
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                   <Terminal className="w-5 h-5 text-primary" />
@@ -89,7 +89,7 @@ export default function AIAgentOverview() {
               </div>
             </div>
 
-            <div className="bg-white border border-border rounded-lg p-6">
+            <div className="bg-card border border-border rounded-lg p-6">
               <div className="flex items-center gap-4 mb-3">
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                   <Code className="w-5 h-5 text-primary" />
@@ -109,7 +109,7 @@ export default function AIAgentOverview() {
               </div>
             </div>
 
-            <div className="bg-white border border-border rounded-lg p-6">
+            <div className="bg-card border border-border rounded-lg p-6">
               <div className="flex items-center gap-4 mb-3">
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                   <Globe className="w-5 h-5 text-primary" />
@@ -134,9 +134,9 @@ export default function AIAgentOverview() {
         <section className="mb-12">
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             <DollarSign className="w-8 h-8 inline text-primary mr-1" />
-            月1,000円以下で環境を作る戦略
+            ローコストで始める方法
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               各ツールには<strong className="text-foreground">無料枠</strong>があります。
               1つのツールの無料枠を使い切ったら別のツールに切り替える
@@ -147,7 +147,7 @@ export default function AIAgentOverview() {
             <div className="overflow-x-auto">
               <table className="w-full border-collapse text-sm">
                 <thead>
-                  <tr className="bg-slate-50">
+                  <tr className="bg-muted">
                     <th className="border border-border px-3 py-2.5 text-left text-foreground font-semibold">ツール</th>
                     <th className="border border-border px-3 py-2.5 text-left text-foreground font-semibold">タイプ</th>
                     <th className="border border-border px-3 py-2.5 text-left text-foreground font-semibold">無料枠</th>
@@ -163,7 +163,7 @@ export default function AIAgentOverview() {
                     ['Warp', 'ターミナル', '月75回のAIリクエスト', 'Mac / Win / Linux'],
                     ['Antigravity', 'クラウド IDE', 'プレビュー期間中は無料', 'ブラウザ（OS不問）'],
                   ].map(([tool, type, free, os], index) => (
-                    <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-slate-50/50'}>
+                    <tr key={index} className={index % 2 === 0 ? 'bg-card' : 'bg-muted/50'}>
                       <td className="border border-border px-3 py-2.5 font-medium text-foreground">{tool}</td>
                       <td className="border border-border px-3 py-2.5 text-muted-foreground">{type}</td>
                       <td className="border border-border px-3 py-2.5 text-muted-foreground">{free}</td>
@@ -222,9 +222,9 @@ export default function AIAgentOverview() {
                   link: '/ai-agent/sub-tools',
                 },
               ].map((item, index) => (
-                <div key={index} className="bg-white rounded-lg p-5 border border-border">
+                <div key={index} className="bg-card rounded-lg p-5 border border-border">
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                    <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-sm flex-shrink-0">
                       {index + 1}
                     </div>
                     <div className="flex-1">
@@ -244,7 +244,7 @@ export default function AIAgentOverview() {
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             このセクションのゴール
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8">
+          <div className="bg-card border border-border rounded-lg p-8">
             <div className="space-y-3">
               {[
                 'AI コーディングツールの種類と特徴を理解した',

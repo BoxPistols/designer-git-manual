@@ -37,7 +37,7 @@ export default function ClaudeCodeSetup() {
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             Claude Code とは？
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8 space-y-6">
+          <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               Claude Code は、Anthropic が提供するターミナルベースのAIエージェントです。
               コマンドラインから直接AIと対話でき、コードの生成・修正・質問への回答などが行えます。
@@ -63,9 +63,9 @@ export default function ClaudeCodeSetup() {
         </section>
 
         {/* ステップ1: Anthropic アカウント作成 */}
-        <div className="bg-white border border-border rounded-lg p-8 mb-8 space-y-6">
+        <div className="bg-card border border-border rounded-lg p-8 mb-8 space-y-6">
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
               1
             </div>
             <h3 className="text-2xl font-semibold text-foreground">Anthropic アカウントを作成する</h3>
@@ -131,9 +131,9 @@ export default function ClaudeCodeSetup() {
         </div>
 
         {/* ステップ2: Node.js の確認 */}
-        <div className="bg-white border border-border rounded-lg p-8 mb-8 space-y-6">
+        <div className="bg-card border border-border rounded-lg p-8 mb-8 space-y-6">
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
               2
             </div>
             <h3 className="text-2xl font-semibold text-foreground">Node.js がインストール済みか確認する</h3>
@@ -168,9 +168,9 @@ node --version
         </div>
 
         {/* ステップ3: Claude Code インストール */}
-        <div className="bg-white border border-border rounded-lg p-8 mb-8 space-y-6">
+        <div className="bg-card border border-border rounded-lg p-8 mb-8 space-y-6">
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
               3
             </div>
             <h3 className="text-2xl font-semibold text-foreground">Claude Code をインストールする</h3>
@@ -219,9 +219,9 @@ claude --version`}
         </div>
 
         {/* ステップ4: 初回認証 */}
-        <div className="bg-white border border-border rounded-lg p-8 mb-8 space-y-6">
+        <div className="bg-card border border-border rounded-lg p-8 mb-8 space-y-6">
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
               4
             </div>
             <h3 className="text-2xl font-semibold text-foreground">初回認証（ログイン）</h3>
@@ -285,9 +285,9 @@ claude`}
         </div>
 
         {/* ステップ5: Hello World */}
-        <div className="bg-white border border-border rounded-lg p-8 mb-8 space-y-6">
+        <div className="bg-card border border-border rounded-lg p-8 mb-8 space-y-6">
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
               5
             </div>
             <h3 className="text-2xl font-semibold text-foreground">Hello World - 最初の対話</h3>
@@ -325,11 +325,11 @@ claude`}
             これが AI エージェントの基本的な動作です。
           </InfoBox>
 
-          <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
-            <p className="text-amber-800 font-medium mb-2">Claude Code の終了方法</p>
-            <p className="text-amber-700 text-sm">
-              対話を終了するには <code className="bg-amber-100 px-1.5 py-0.5 rounded">/exit</code> と入力するか、
-              <code className="bg-amber-100 px-1.5 py-0.5 rounded">Ctrl + C</code> を押します。
+          <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg p-4">
+            <p className="text-amber-600 dark:text-amber-400 font-medium mb-2">Claude Code の終了方法</p>
+            <p className="text-amber-600 dark:text-amber-400 text-sm">
+              対話を終了するには <code className="bg-amber-100 dark:bg-amber-900/50 px-1.5 py-0.5 rounded">/exit</code> と入力するか、
+              <code className="bg-amber-100 dark:bg-amber-900/50 px-1.5 py-0.5 rounded">Ctrl + C</code> を押します。
             </p>
           </div>
         </div>
@@ -339,7 +339,7 @@ claude`}
           <h2 className="text-3xl font-poppins font-bold text-foreground mb-6">
             このページのまとめ
           </h2>
-          <div className="bg-white border border-border rounded-lg p-8">
+          <div className="bg-card border border-border rounded-lg p-8">
             <div className="space-y-3">
               {[
                 'Anthropic アカウントを作成した',
