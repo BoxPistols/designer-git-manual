@@ -57,6 +57,15 @@ const sections = [
       { title: '開発環境の統合確認', href: '/advanced/integration' },
     ],
   },
+  {
+    id: 'ai-agent',
+    title: 'AI エージェント連携',
+    subsections: [
+      { title: 'Claude Code 導入', href: '/ai-agent/claude-code-setup' },
+      { title: 'Claude Code 基本操作', href: '/ai-agent/claude-code-basics' },
+      { title: 'Gemini CLI 導入（おまけ）', href: '/ai-agent/gemini-cli' },
+    ],
+  },
 ];
 
 export default function Navigation() {
@@ -106,7 +115,7 @@ export default function Navigation() {
                           expandedSection === section.id ? null : section.id
                         )
                       }
-                      className="w-full flex items-center justify-between px-4 py-2 rounded-lg text-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground transition-colors"
+                      className="w-full flex items-center justify-between px-4 py-2 rounded-lg text-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                     >
                       <span>{section.title}</span>
                       <ChevronDown
