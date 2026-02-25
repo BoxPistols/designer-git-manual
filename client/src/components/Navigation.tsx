@@ -1,8 +1,9 @@
-import { useState, useRef, useEffect } from 'react';
-import { Link } from 'wouter';
-import { ChevronDown, Menu, X, Search } from 'lucide-react';
-import { pages } from '@/lib/navigation';
+import { useState, useRef, useEffect, useMemo } from 'react';
+import { Link, useLocation } from 'wouter';
+import { ChevronDown, Menu, X, Search, Sun, Moon } from 'lucide-react';
+import { pages, getPageByPath } from '@/lib/navigation';
 import { useOS } from '@/contexts/OSContext';
+import { useTheme } from '@/contexts/ThemeContext';
 import { searchShortcutLabel } from '@/lib/keyLabels';
 
 const sections = [
@@ -79,7 +80,19 @@ export default function Navigation() {
   const [searchQuery, setSearchQuery] = useState('');
   const searchInputRef = useRef<HTMLInputElement>(null);
   const { selectedOS } = useOS();
+  const { theme, toggleTheme } = useTheme();
   const isMac = selectedOS === 'mac';
+  const [location] = useLocation();
+
+  // 現在ページの情報
+  const currentPage = useMemo(() => getPageByPath(location), [location]);
+
+  // 現在ページのセクションを自動展開
+  useEffect(() => {
+    if (currentPage) {
+      setExpandedSection(currentPage.sectionId);
+    }
+  }, [currentPage]);
 
   // Cmd+K / Ctrl+K でフォーカス
   useEffect(() => {
@@ -105,7 +118,7 @@ export default function Navigation() {
       {/* Mobile Menu Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="md:hidden fixed top-4 left-4 z-50 p-2 rounded-lg bg-white border border-border hover:bg-muted"
+        className="md:hidden fixed top-4 left-4 z-50 p-2 rounded-lg bg-background border border-border hover:bg-muted"
       >
         {isOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
@@ -117,11 +130,18 @@ export default function Navigation() {
         }`}
       >
         <div className="p-6">
-          <Link href="/" className="flex items-center gap-2 mb-6">
-            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-white font-poppins font-bold text-lg">G</span>
+          <Link href="/" className="flex items-center gap-3 mb-6 group">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M21 12l-3-3m3 3l-3 3m3-3H15" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M3 8V6a2 2 0 012-2h2M3 16v2a2 2 0 002 2h2M17 4h2a2 2 0 012 2v2" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
             </div>
-            <span className="font-poppins font-bold text-lg text-foreground">はじめての Git</span>
+            <div className="flex flex-col">
+              <span className="font-poppins font-bold text-base text-foreground leading-tight">はじめての</span>
+              <span className="font-poppins font-semibold text-xs text-primary leading-tight">Git マニュアル</span>
+            </div>
           </Link>
 
           {/* 検索 */}
@@ -136,6 +156,15 @@ export default function Navigation() {
               className="w-full pl-9 pr-3 py-2 text-sm rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
+
+          {/* ダークモード切替 */}
+          <button
+            onClick={toggleTheme}
+            className="w-full flex items-center gap-2 px-4 py-2 mb-4 text-sm rounded-lg border border-border text-muted-foreground hover:text-foreground hover:bg-sidebar-accent transition-colors"
+          >
+            {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
+            <span>{theme === 'dark' ? 'ライトモード' : 'ダークモード'}</span>
+          </button>
 
           {/* 検索結果 */}
           {hasSearch ? (
@@ -175,7 +204,11 @@ export default function Navigation() {
                     <Link
                       href={section.href}
                       onClick={() => setIsOpen(false)}
-                      className="block px-4 py-2 rounded-lg text-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground transition-colors"
+                      className={`block px-4 py-2 rounded-lg transition-colors ${
+                        location === section.href
+                          ? 'bg-primary/10 text-primary font-medium'
+                          : 'text-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground'
+                      }`}
                     >
                       {section.title}
                     </Link>
@@ -204,7 +237,11 @@ export default function Navigation() {
                               key={subsection.href}
                               href={subsection.href}
                               onClick={() => setIsOpen(false)}
-                              className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-sidebar-accent/50 rounded-lg transition-colors"
+                              className={`block px-4 py-2 text-sm rounded-lg transition-colors ${
+                                location === subsection.href
+                                  ? 'bg-primary/10 text-primary font-medium'
+                                  : 'text-muted-foreground hover:text-foreground hover:bg-sidebar-accent/50'
+                              }`}
                             >
                               {subsection.title}
                             </Link>
