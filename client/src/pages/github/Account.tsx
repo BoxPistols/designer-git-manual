@@ -31,17 +31,14 @@ export default function GitHubAccount() {
       {/* Main Content */}
       <div className="max-w-4xl mx-auto px-4 md:px-8 py-12">
         <WhyNowBox
-          title="GitHub アカウントは「開発者のポートフォリオ」"
-          tags={['デジタル名刺', 'AI ツール連携', 'オープンソース']}
+          title="GitHub アカウントとは"
+          tags={['AI ツール連携', 'コード共有', 'バックアップ']}
         >
           <p>
-            GitHub アカウントは、エンジニアにとっての LinkedIn や Behance のようなものです。「どんなプロジェクトを作ったか」「どれだけ継続して活動しているか」が一目でわかる<strong>デジタルポートフォリオ</strong>として機能します。
+            GitHub アカウントは、作ったプロジェクトをオンラインで管理するための ID です。Cursor や Claude Code などの AI ツールも、GitHub アカウントと連携して動きます。
           </p>
           <p>
-            また、Cursor・Claude Code・Copilot など、AI コーディングツールの多くは GitHub アカウントと連携することで真価を発揮します。アカウントがないと、これらの恩恵を十分に受けられません。
-          </p>
-          <p>
-            <strong>例えるなら：</strong> GitHub アカウントは「デジタル世界の住所」。住所がないと荷物が届かないように、アカウントがないとコードも届け先がありません。
+            メールアドレスがないとオンラインサービスに登録できないのと同じで、GitHub アカウントがないとコードのオンライン管理を始められません。登録自体は数分で完了します。
           </p>
         </WhyNowBox>
 

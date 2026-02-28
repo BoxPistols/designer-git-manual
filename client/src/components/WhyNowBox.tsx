@@ -2,9 +2,11 @@ import { Sparkles } from 'lucide-react';
 import { ReactNode } from 'react';
 
 interface WhyNowBoxProps {
+  /** 見出しテキスト。省略時は汎用テキストを表示。heading は常にレンダリングされます。 */
   title?: string;
   children: ReactNode;
-  tags?: string[];
+  /** 表示するタグ。空配列は無効のため、指定する場合は1つ以上必要です。 */
+  tags?: [string, ...string[]];
 }
 
 /**
@@ -17,7 +19,7 @@ export default function WhyNowBox({ title = 'なぜ今、これを学ぶのか�
       <div className="flex items-start gap-3">
         <div className="flex-shrink-0 mt-0.5">
           <div className="w-8 h-8 rounded-lg bg-violet-500 flex items-center justify-center">
-            <Sparkles className="text-white" size={16} />
+            <Sparkles className="text-white" size={16} aria-hidden="true" />
           </div>
         </div>
         <div className="flex-1">

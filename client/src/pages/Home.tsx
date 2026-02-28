@@ -67,19 +67,19 @@ export default function Home() {
 
   const aiContextCards = [
     {
-      icon: <BrainCircuit className="w-6 h-6 text-violet-600" />,
-      title: 'AI がコードを書く時代に',
-      body: 'ChatGPT や Claude に「このボタンを青くして」と頼むだけで、コードが完成する時代になりました。でも、そのコードを**どこに保存して、どうやってチームで共有するか**はまだ人間の仕事です。',
+      icon: <BrainCircuit className="w-6 h-6 text-violet-600" aria-hidden="true" />,
+      title: 'AI が書いたコードの置き場所',
+      body: 'AI にコードを生成してもらっても、それをどこに保存して誰と共有するかは別の話です。Git はファイルの変更履歴を記録する仕組みで、「変更履歴付きのフォルダ」と考えるとイメージしやすいです。',
     },
     {
-      icon: <Rocket className="w-6 h-6 text-orange-500" />,
-      title: 'デザイナー・ビジネスパーソンが GitHub を持つ意味',
-      body: '「GitHub を使える」というだけで、エンジニアとの会話が変わります。AI ツールの多くは GitHub と連携しており、使いこなせる人とそうでない人の差は今後さらに広がっていきます。',
+      icon: <Rocket className="w-6 h-6 text-orange-500" aria-hidden="true" />,
+      title: 'AI ツールとの連携',
+      body: 'Cursor や GitHub Copilot など、多くの AI コーディングツールは GitHub と連携して動きます。エンジニアとコードを共有するときも、GitHub リポジトリを介することがほとんどです。',
     },
     {
-      icon: <Globe className="w-6 h-6 text-blue-500" />,
-      title: '世界標準のコラボレーション基盤',
-      body: 'GitHub は世界中の 1 億人以上が使うプラットフォームです。オープンソースの AI ツール、デザインシステム、ライブラリのほぼすべてが GitHub 上にあります。読めるだけで情報収集力が格段に上がります。',
+      icon: <Globe className="w-6 h-6 text-blue-500" aria-hidden="true" />,
+      title: '公開されているコードの読み方',
+      body: 'AI ツールやデザインシステムの多くは GitHub 上でコードが公開されています。使い方のサンプルやバグ修正の履歴を直接確認したいときに、読み方を知っていると役立ちます。',
     },
   ];
 
@@ -134,21 +134,20 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-violet-100 dark:bg-violet-900/40 border border-violet-200 dark:border-violet-700">
-              <BrainCircuit className="w-4 h-4 text-violet-600 dark:text-violet-400" />
-              <span className="text-violet-700 dark:text-violet-300 font-medium text-sm">AI 時代の新しいスタンダード</span>
+              <BrainCircuit className="w-4 h-4 text-violet-600 dark:text-violet-400" aria-hidden="true" />
+              <span className="text-violet-700 dark:text-violet-300 font-medium text-sm">このガイドについて</span>
             </div>
             <h2 className="text-3xl font-poppins font-bold text-foreground mb-4">
-              なぜ今、これを学ぶのか？
+              なぜこれを学ぶのか
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              「エンジニアじゃないから関係ない」は、もう通じない時代になっています。
-              AI があらゆる職種の仕事を変えている今、その変化を使いこなす側に立てるかどうかが問われています。
+              Git と GitHub はもともとエンジニア向けのツールですが、AI がコードを補助するようになったことで、非エンジニアが触れる場面も増えています。このガイドでは、実際に必要な操作だけをカバーします。
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {aiContextCards.map((card, index) => (
-              <div key={index} className="bg-card border border-border rounded-xl p-6 hover:shadow-md transition-shadow">
+            {aiContextCards.map((card) => (
+              <div key={card.title} className="bg-card border border-border rounded-xl p-6 hover:shadow-md transition-shadow">
                 <div className="mb-4">{card.icon}</div>
                 <h3 className="font-semibold text-foreground mb-3 text-base">{card.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{card.body}</p>
@@ -158,41 +157,41 @@ export default function Home() {
 
           {/* Real-world scenario */}
           <div className="mt-10 bg-card border border-border rounded-xl p-8">
-            <h3 className="font-bold text-foreground mb-6 text-lg">こんなシーンで役立ちます</h3>
+            <h3 className="font-bold text-foreground mb-6 text-lg">どんな場面で使うか</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="flex gap-4">
-                <span className="text-2xl flex-shrink-0">🎨</span>
+                <span className="text-2xl flex-shrink-0" aria-hidden="true">🎨</span>
                 <div>
                   <h4 className="font-semibold text-foreground mb-1 text-sm">デザイナーの場合</h4>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Figma でデザインしたコンポーネントを AI に実装してもらい、GitHub でエンジニアにレビューしてもらう。「コードは書けないけど Git は使える」だけで、コラボレーションの質が変わる。
+                    Figma でデザインしたものを AI に実装してもらい、GitHub でエンジニアに渡す。コードの中身より、ファイルをどこに置いてどう共有するかを知っていれば対応できます。
                   </p>
                 </div>
               </div>
               <div className="flex gap-4">
-                <span className="text-2xl flex-shrink-0">💼</span>
+                <span className="text-2xl flex-shrink-0" aria-hidden="true">💼</span>
                 <div>
                   <h4 className="font-semibold text-foreground mb-1 text-sm">企画・マーケターの場合</h4>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    LP や社内ツールを AI に作らせて GitHub Pages で公開。エンジニアに頼まずに「とりあえず動くもの」を作れる人材は、どんな組織でも重宝される。
+                    LP や社内ツールを AI に作らせて GitHub Pages で公開する。エンジニアに依頼しなくても、基本的な操作さえ覚えれば自分でできます。
                   </p>
                 </div>
               </div>
               <div className="flex gap-4">
-                <span className="text-2xl flex-shrink-0">🚀</span>
+                <span className="text-2xl flex-shrink-0" aria-hidden="true">🚀</span>
                 <div>
-                  <h4 className="font-semibold text-foreground mb-1 text-sm">スタートアップ・副業の場合</h4>
+                  <h4 className="font-semibold text-foreground mb-1 text-sm">副業・個人開発の場合</h4>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    アイデアを AI で素早くプロトタイプ化し、GitHub でバージョン管理しながら改善を重ねる。コードを書く速さより「使いこなす」力が価値になる時代。
+                    AI でプロトタイプを作り、GitHub でバージョン管理しながら改善していく。変更の履歴が残るため、どの時点にも戻せます。
                   </p>
                 </div>
               </div>
               <div className="flex gap-4">
-                <span className="text-2xl flex-shrink-0">🤝</span>
+                <span className="text-2xl flex-shrink-0" aria-hidden="true">🤝</span>
                 <div>
-                  <h4 className="font-semibold text-foreground mb-1 text-sm">エンジニアとの協働</h4>
+                  <h4 className="font-semibold text-foreground mb-1 text-sm">エンジニアと一緒に作業する場合</h4>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    「このリポジトリをフォークして PR を送って」「main ブランチにマージして」といった会話が理解できるだけで、エンジニアチームとの距離が縮まる。
+                    「PR を送って」「main にマージして」といったやり取りの意味がわかるようになります。指示を出す側でも受ける側でも、同じ用語で話せると作業がスムーズになります。
                   </p>
                 </div>
               </div>
@@ -313,7 +312,7 @@ export default function Home() {
             準備はいいですか？
           </h2>
           <p className="text-muted-foreground mb-8">
-            AI が当たり前になった今、「使いこなす側」になる最初の一歩を踏み出しましょう。
+            ガイドに沿って手を動かしながら進めていきましょう。
           </p>
           <Button
             size="lg"

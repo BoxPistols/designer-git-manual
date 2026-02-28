@@ -38,17 +38,14 @@ export default function HistoryWorkflow() {
       {/* Main Content */}
       <div className="max-w-4xl mx-auto px-4 md:px-8 py-12">
         <WhyNowBox
-          title="履歴・差分 = AI が間違えた時の「証拠と保険」"
-          tags={['デバッグ', 'レビュー', 'AI 監視', '監査ログ']}
+          title="履歴・差分の確認とは"
+          tags={['変更の確認', 'レビュー', 'デバッグ']}
         >
           <p>
-            AI はときに予期しない変更を加えることがあります。「どこが変わったのか」を瞬時に把握できるのが <code className="text-xs bg-muted px-1 py-0.5 rounded">git diff</code> と <code className="text-xs bg-muted px-1 py-0.5 rounded">git log</code> です。<strong>AI が何をしたか追跡するための監視ログ</strong>として活用できます。
+            git log はコミットの一覧を、git diff は2つの状態の差分を表示するコマンドです。Google ドキュメントの「変更履歴を表示」に近い機能です。
           </p>
           <p>
-            <strong>例えるなら：</strong> Google ドキュメントの「変更履歴を表示」機能です。「昨日の山田さんの編集」のように、「3日前の AI による変更」を赤/緑のハイライトで確認できます。
-          </p>
-          <p>
-            <strong>こんな時に使います：</strong> AI が大量に変更を加えた後に「何が変わったか確認したい」、チームメンバーのコードをレビューする前に差分を確認したい、バグが混入したコミットを特定したい時。
+            「どのファイルの、どの行が変わったのか」を確認できます。誰かのコードをレビューする前や、変更を加えた後に意図した通りになっているか確認するときに使います。
           </p>
         </WhyNowBox>
 

@@ -38,17 +38,14 @@ export default function PushPull() {
       {/* Main Content */}
       <div className="max-w-4xl mx-auto px-4 md:px-8 py-12">
         <WhyNowBox
-          title="Push / Pull = AI との成果物を世界と繋ぐ仕組み"
-          tags={['クラウド同期', 'チーム共有', 'バックアップ', 'AI ツール連携']}
+          title="Push と Pull とは"
+          tags={['クラウド同期', 'チーム共有', 'バックアップ']}
         >
           <p>
-            Push は「ローカルの成果を GitHub に送る」、Pull は「GitHub の最新を手元に取り込む」操作です。たとえるなら、<strong>Push は Google Drive へのアップロード、Pull はダウンロード</strong>。ただしコードの差分を賢く管理してくれます。
+            Push は手元の変更を GitHub に送る操作、Pull は GitHub の変更を手元に取り込む操作です。Google Drive でいう「アップロード」と「ダウンロード」に近いです。ただし Git は差分だけを管理するため、ファイルが丸ごと上書きされることはありません。
           </p>
           <p>
-            AI ツール（Cursor・Claude Code など）は、Push されたコードを見てレビューしたり、自動でテストを走らせたりできます。Push した瞬間にチームの全員が最新版にアクセスできる—これが現代のチーム開発の基本です。
-          </p>
-          <p>
-            <strong>こんな時に使います：</strong> 「今日の作業をバックアップしたい」「エンジニアに最新版を見せたい」「別のパソコンでも作業したい」。すべて Push → Pull で解決します。
+            作業が終わったら Push してバックアップする、別のパソコンで作業を再開する前に Pull する、という流れが基本です。
           </p>
         </WhyNowBox>
 
