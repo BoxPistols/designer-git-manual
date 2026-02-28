@@ -20,6 +20,9 @@ import GitSetup from "./pages/github/Setup";
 import FirstRepo from "./pages/github/FirstRepo";
 import MarkdownGuide from "./pages/github/Markdown";
 
+// Markdown & Prompt Pages
+import PromptEngineering from "./pages/markdown-prompt/PromptEngineering";
+
 // Workflow Pages
 import CommitPage from "./pages/workflow/Commit";
 import PushPullPage from "./pages/workflow/PushPull";
@@ -68,6 +71,9 @@ function Router() {
           <Route path={"/github/setup"} component={GitSetup} />
           <Route path={"/github/first-repo"} component={FirstRepo} />
           <Route path={"/github/markdown"} component={MarkdownGuide} />
+
+          {/* Markdown & Prompt Section */}
+          <Route path={"/markdown-prompt/prompt-engineering"} component={PromptEngineering} />
 
           {/* Workflow Section */}
           <Route path={"/workflow/commit"} component={CommitPage} />

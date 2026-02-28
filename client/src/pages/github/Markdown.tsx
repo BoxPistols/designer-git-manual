@@ -19,7 +19,7 @@ export default function MarkdownGuide() {
       <div className="bg-primary/5 border-b border-border">
         <div className="max-w-4xl mx-auto px-4 md:px-8 py-12">
           <div className="inline-block mb-4 px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-semibold">
-            STEP 9 / 26
+            STEP 9 / 27
           </div>
           <h1 className="text-4xl font-poppins font-bold text-foreground mb-4">
             Markdown を覚えよう
@@ -706,15 +706,15 @@ export default function MarkdownGuide() {
         {/* Completion */}
         <section className="mb-12">
           <InfoBox type="success" title="Markdown 入門完了！">
-            Markdown の基本を学びました。これで GitHub の README や Issue を書けるだけでなく、AI とのコミュニケーションもスムーズになります。次は、Git ワークフロー（Commit、Push、Pull）の実践に進みましょう。
+            Markdown の基本を学びました。これで GitHub の README や Issue を書けるだけでなく、AI とのやり取りにも活用できます。次は、Markdown の構造を AI プロンプトに応用する方法を見ていきます。
           </InfoBox>
         </section>
 
         {/* Navigation */}
         <div className="flex justify-between items-center pt-8 border-t border-border">
           <Button variant="outline" onClick={() => window.location.href = "/github/first-repo"}>戻る</Button>
-          <Button className="gap-2" onClick={() => window.location.href = "/workflow/commit"}>
-            次へ：ファイル作成と Commit
+          <Button className="gap-2" onClick={() => window.location.href = "/markdown-prompt/prompt-engineering"}>
+            次へ：プロンプトエンジニアリング入門
             <ArrowRight size={20} />
           </Button>
         </div>
