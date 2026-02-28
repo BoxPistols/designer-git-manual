@@ -64,11 +64,11 @@ export default function FirstRepo() {
           </h2>
           <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              リポジトリは、プロジェクトのファイルと変更履歴を保存する場所です。フォルダのようなものですが、ただのフォルダとは違い、<strong>すべての変更が時系列で記録され、どの時点にも戻れる</strong>という点が特徴です。GitHub 上のリポジトリをローカルにコピーすることで、自分のパソコンで開発できます。
+              リポジトリは、プロジェクトのファイルと変更履歴を保存する場所です。通常のフォルダと違い、ファイルを上書きしても以前のバージョンが履歴として残ります。GitHub 上のリポジトリをローカルにコピーすることで、自分のパソコンで作業できます。
             </p>
             <div className="bg-amber-50 dark:bg-amber-950/30 border-l-4 border-amber-400 p-4 rounded">
               <p className="text-sm text-foreground/80">
-                <strong>📚 例えるなら：</strong> Notion のページ履歴機能のようなもの。「1週間前のバージョンに戻す」が、プロジェクト全体のファイルに対してできるイメージです。
+                <strong>例：</strong> Notion のページ履歴に近いです。「1週間前の状態に戻す」という操作が、プロジェクト全体のファイルに対してできます。
               </p>
             </div>
 

@@ -49,7 +49,7 @@ export default function GitHubAccount() {
           </h2>
           <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              GitHub アカウントがあれば、以下のことができるようになります。エンジニア専用のサービスに思えますが、実はデザイナーや企画職でも日常的に活用できる場面が増えています：
+              GitHub アカウントがあれば、以下のことができます：
             </p>
 
             <div className="space-y-4">

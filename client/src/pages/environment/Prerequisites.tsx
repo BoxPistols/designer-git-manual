@@ -54,11 +54,11 @@ export default function Prerequisites() {
           </h2>
           <div className="bg-card border border-border rounded-lg p-8 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Git は、ファイルの変更履歴を管理するツール（バージョン管理システム）です。デザインファイルや文書を作成する際に「最終版」「最終版_v2」「最終版_v3_本当の最終」と複数のファイルを作成してしまった経験はありませんか？Git を使うと、そのような混乱を1つのファイルで解決できます。
+              Git は、ファイルの変更履歴を管理するツール（バージョン管理システム）です。「最終版」「最終版_v2」「最終版_v3_本当の最終」のように複数のファイルを作ってしまう状況を、Git では1つのファイルで管理できます。
             </p>
             <div className="bg-amber-50 dark:bg-amber-950/30 border-l-4 border-amber-400 p-4 rounded">
               <p className="text-sm text-foreground/80">
-                <strong>📁 こんな時に使います：</strong> AI に新機能を追加してもらったけど、うまくいかなかった。Git があれば「3日前の状態に戻して」と一瞬で元に戻せます。AI との試行錯誤を支える「やり直しボタン」です。
+                <strong>使用例：</strong> AI に変更を加えてもらったがうまくいかなかった場合、特定の時点のコードに戻せます。
               </p>
             </div>
 
@@ -97,7 +97,7 @@ export default function Prerequisites() {
             </p>
             <div className="bg-amber-50 dark:bg-amber-950/30 border-l-4 border-amber-400 p-4 rounded">
               <p className="text-sm text-foreground/80">
-                <strong>🌐 こんな時に使います：</strong> デザイナーが Figma でデザインし、AI がコードを書き、それを GitHub に上げてエンジニアがレビューする。これが現代のチーム開発の流れです。GitHub は「コードの Google Drive」と思えば OK です。
+                <strong>使用例：</strong> Figma でデザインし、AI がコードを書き、GitHub でエンジニアに渡す。Google Drive にプロジェクトフォルダを置くのに近いイメージです。
               </p>
             </div>
 
@@ -129,7 +129,7 @@ export default function Prerequisites() {
             </p>
             <div className="bg-amber-50 dark:bg-amber-950/30 border-l-4 border-amber-400 p-4 rounded">
               <p className="text-sm text-foreground/80">
-                <strong>💡 例えるなら：</strong> 普段使う Mac/Windows の画面（Finder・エクスプローラー）は「絵で操作する方法（GUI）」。ターミナルは「言葉で直接命令する方法（CUI）」です。料理で言えば、レシピ本を見ながら作るか、口頭で指示するかの違いです。慣れると圧倒的に速くなります。
+                <strong>例：</strong> Finder やエクスプローラーをクリックして操作するのが GUI、ターミナルにコマンドを入力して操作するのが CUI です。どちらも同じ操作をしていますが、方法が違います。
               </p>
             </div>
 

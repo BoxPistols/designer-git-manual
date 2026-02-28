@@ -68,7 +68,7 @@ export default function CommitWorkflow() {
             </p>
             <div className="bg-amber-50 dark:bg-amber-950/30 border-l-4 border-amber-400 p-4 rounded">
               <p className="text-sm text-foreground/80">
-                <strong>🎮 例えるなら：</strong> ゲームのセーブポイントです。Ctrl+S（ファイル保存）は「一時的な保存」、Commit は「ゲームを進めてから "ここまで進んだ" と記録するセーブ」。Commit しておけば、後でどんな状態にも戻れます。
+                <strong>例：</strong> ゲームのセーブポイントに近い考え方です。Ctrl+S はファイルを上書き保存しますが、Commit はその時点の状態を履歴として残します。後から特定の Commit に戻すことができます。
               </p>
             </div>
 
@@ -168,7 +168,7 @@ export default function CommitWorkflow() {
                   <h4 className="font-semibold text-foreground mb-1">git add（ステージング）</h4>
                   <p className="text-muted-foreground text-sm">
                     変更したファイルを「ステージング」します。これは、どのファイルを Commit するかを指定する操作です。<br />
-                    <span className="text-foreground/60 text-xs">📦 例えるなら：宅配便で送る荷物を段ボールに入れる作業です。入れたものだけが次のステップ（Commit）で送られます。</span>
+                    <span className="text-foreground/60 text-xs">例：宅配便に入れる荷物を選ぶ作業に近いです。段ボールに入れたものだけが次のステップ（Commit）の対象になります。</span>
                   </p>
                 </div>
               </div>
