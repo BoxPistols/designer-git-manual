@@ -335,7 +335,7 @@ export default function CommitWorkflow() {
 
         {/* Navigation */}
         <div className="flex justify-between items-center pt-8 border-t border-border">
-          <Button variant="outline" onClick={() => window.location.href = "/github/markdown"}>戻る</Button>
+          <Button variant="outline" onClick={() => window.location.href = "/markdown-prompt/prompt-engineering"}>戻る</Button>
           <Button className="gap-2" onClick={() => window.location.href = "/workflow/push-pull"}>
               次へ：Push と Pull
               
