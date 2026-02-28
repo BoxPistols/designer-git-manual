@@ -29,6 +29,7 @@ const sections = [
       { title: 'GitHub アカウント作成', href: '/github/account' },
       { title: 'Git ローカル設定', href: '/github/setup' },
       { title: '最初のリポジトリ作成', href: '/github/first-repo' },
+      { title: 'Markdown 入門', href: '/github/markdown' },
     ],
   },
   {
