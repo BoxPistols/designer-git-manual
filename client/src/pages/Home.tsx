@@ -1,7 +1,7 @@
 import { ArrowRight, CheckCircle2, Zap, Users, BookOpen, Keyboard, BrainCircuit, Rocket, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useOS } from '@/contexts/OSContext';
-import { modKey, ctrlKey } from '@/lib/keyLabels';
+import { modKey, navModKey } from '@/lib/keyLabels';
 
 /**
  * ホームページ - ランディング
@@ -85,10 +85,10 @@ export default function Home() {
 
   const shortcuts = [
     { keys: `${modKey(isMac)}+K`, description: 'ページ検索' },
-    { keys: `${ctrlKey(isMac)}+↓`, description: '次のページへ移動' },
-    { keys: `${ctrlKey(isMac)}+↑`, description: '前のページへ移動' },
-    { keys: `Shift+${ctrlKey(isMac)}+↓`, description: '次のセクションへ移動' },
-    { keys: `Shift+${ctrlKey(isMac)}+↑`, description: '前のセクションへ移動' },
+    { keys: `${navModKey(isMac)}+↓`, description: '次のページへ移動' },
+    { keys: `${navModKey(isMac)}+↑`, description: '前のページへ移動' },
+    { keys: `Shift+${navModKey(isMac)}+↓`, description: '次のセクションへ移動' },
+    { keys: `Shift+${navModKey(isMac)}+↑`, description: '前のセクションへ移動' },
   ];
 
   return (
