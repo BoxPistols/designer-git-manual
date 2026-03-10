@@ -48,14 +48,13 @@ import ClaudeCodeBasics from "./pages/ai-agent/ClaudeCodeBasics";
 import CursorCline from "./pages/ai-agent/CursorCline";
 import SubTools from "./pages/ai-agent/SubTools";
 
-import { useKeyboardNav } from "./hooks/useKeyboardNav";
+import KeyboardNav from "./components/KeyboardNav";
 
 function Router() {
-  useKeyboardNav();
-
   return (
     <div className="flex">
       <Navigation />
+      <KeyboardNav />
       <main className="flex-1 md:ml-64">
         <Switch>
           <Route path={"/"} component={Home} />
