@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle2, Zap, Users, BookOpen, Keyboard, BrainCircuit, Rocket, Globe } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Zap, Users, BookOpen, Keyboard, BrainCircuit, Rocket, Globe, Search, Settings, Code2, Terminal } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useOS } from '@/contexts/OSContext';
 import { modKey, navModKey } from '@/lib/keyLabels';
@@ -130,6 +130,128 @@ export default function Home() {
             <p className="text-sm text-muted-foreground">
               <span className="font-semibold text-foreground">総学習時間：</span> 約 2 時間 45 分
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* このガイドの使い方 Section */}
+      <section className="py-16 px-4 md:px-8 bg-gradient-to-br from-sky-50/50 to-cyan-50/50 dark:from-sky-950/20 dark:to-cyan-950/20">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-sky-100 dark:bg-sky-900/40 border border-sky-200 dark:border-sky-700">
+              <BookOpen className="w-4 h-4 text-sky-600 dark:text-sky-400" aria-hidden="true" />
+              <span className="text-sky-700 dark:text-sky-300 font-medium text-sm">ガイド</span>
+            </div>
+            <h2 className="text-3xl font-poppins font-bold text-foreground mb-4">
+              このガイドの使い方
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              学習をスムーズに進めるための機能を紹介します。
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* キーボードショートカット */}
+            <div className="bg-card border border-border rounded-xl p-6 hover:shadow-md transition-shadow">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex items-center justify-center h-10 w-10 rounded-lg bg-sky-100 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400">
+                  <Keyboard className="w-5 h-5" />
+                </div>
+                <h3 className="font-semibold text-foreground text-base">キーボードショートカット</h3>
+              </div>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li className="flex items-start gap-2">
+                  <kbd className="inline-flex items-center px-1.5 py-0.5 rounded bg-muted border border-border text-xs font-mono shrink-0">←</kbd>
+                  <kbd className="inline-flex items-center px-1.5 py-0.5 rounded bg-muted border border-border text-xs font-mono shrink-0">→</kbd>
+                  <span>前後のページに移動</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <kbd className="inline-flex items-center px-1.5 py-0.5 rounded bg-muted border border-border text-xs font-mono shrink-0">Shift+←</kbd>
+                  <kbd className="inline-flex items-center px-1.5 py-0.5 rounded bg-muted border border-border text-xs font-mono shrink-0">Shift+→</kbd>
+                  <span>前後のセクションに移動</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <kbd className="inline-flex items-center px-1.5 py-0.5 rounded bg-muted border border-border text-xs font-mono shrink-0">{modKey(isMac)}+K</kbd>
+                  <span>検索にフォーカス</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <kbd className="inline-flex items-center px-1.5 py-0.5 rounded bg-muted border border-border text-xs font-mono shrink-0">Home</kbd>
+                  <span>ページトップにスクロール</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* キーワード検索 */}
+            <div className="bg-card border border-border rounded-xl p-6 hover:shadow-md transition-shadow">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex items-center justify-center h-10 w-10 rounded-lg bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400">
+                  <Search className="w-5 h-5" />
+                </div>
+                <h3 className="font-semibold text-foreground text-base">キーワード検索</h3>
+              </div>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-500 shrink-0">•</span>
+                  <span>サイドバーの検索欄にキーワードを入力</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-500 shrink-0">•</span>
+                  <span>ページタイトルだけでなく、H2 見出しのキーワードでも検索可能</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-500 shrink-0">•</span>
+                  <span>検索結果の「#」付きサブアイテムをクリックで該当箇所にスクロール＆ハイライト</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* 画面設定 */}
+            <div className="bg-card border border-border rounded-xl p-6 hover:shadow-md transition-shadow">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex items-center justify-center h-10 w-10 rounded-lg bg-amber-100 dark:bg-amber-900/40 text-amber-600 dark:text-amber-400">
+                  <Settings className="w-5 h-5" />
+                </div>
+                <h3 className="font-semibold text-foreground text-base">画面設定</h3>
+              </div>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li className="flex items-start gap-2">
+                  <span className="text-amber-500 shrink-0">•</span>
+                  <span>ダークモード / ライトモード切替</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-amber-500 shrink-0">•</span>
+                  <span>OS 切替（Mac / Windows）でショートカットキーや手順が自動で変わります</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* コーディングチャレンジ */}
+            <div className="bg-card border border-border rounded-xl p-6 hover:shadow-md transition-shadow">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex items-center justify-center h-10 w-10 rounded-lg bg-violet-100 dark:bg-violet-900/40 text-violet-600 dark:text-violet-400">
+                  <Code2 className="w-5 h-5" />
+                </div>
+                <h3 className="font-semibold text-foreground text-base">コーディングチャレンジの使い方</h3>
+              </div>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li className="flex items-start gap-2">
+                  <Terminal className="w-4 h-4 text-violet-500 shrink-0 mt-0.5" />
+                  <span>Git コマンドを入力すると疑似ターミナルで実行結果をリアルタイム表示</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-violet-500 shrink-0">•</span>
+                  <span>Markdown はプレビューで即座に HTML 変換表示</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-violet-500 shrink-0">•</span>
+                  <span>「チェック」で採点、「ヒント」で段階的にヒント表示、「模範解答」で正解確認</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-violet-500 shrink-0">•</span>
+                  <span>「リセット」で初期状態に戻せます</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
