@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle2, Zap, Users, BookOpen, Keyboard, BrainCircuit, Rocket, Globe, Search, Settings, Code2, Terminal } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Zap, Users, BookOpen, Keyboard, BrainCircuit, Rocket, Globe, Search, Settings, Code2, Terminal, Eye, Lightbulb, RotateCcw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useOS } from '@/contexts/OSContext';
 import { modKey, navModKey } from '@/lib/keyLabels';
@@ -150,7 +150,108 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* コーディングチャレンジ（インタラクティブエディタ）の使い方 — 全幅カード */}
+          <div className="bg-card border border-border rounded-xl p-6 md:p-8 hover:shadow-md transition-shadow mb-6">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="flex items-center justify-center h-10 w-10 rounded-lg bg-violet-100 dark:bg-violet-900/40 text-violet-600 dark:text-violet-400">
+                <Code2 className="w-5 h-5" />
+              </div>
+              <h3 className="font-semibold text-foreground text-lg">コーディングチャレンジ（インタラクティブエディタ）の使い方</h3>
+            </div>
+
+            {/* エディタ画面の構成 */}
+            <div className="mb-6">
+              <h4 className="font-semibold text-foreground text-sm mb-3">エディタ画面の構成</h4>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                エディタは左右に分割されています。<span className="font-medium text-foreground">左側</span>がコード入力エリア、<span className="font-medium text-foreground">右側</span>がプレビューエリアです。左側にコードを入力すると、右側にリアルタイムで結果が反映されます。
+              </p>
+            </div>
+
+            {/* プレビューの種類 */}
+            <div className="mb-6">
+              <h4 className="font-semibold text-foreground text-sm mb-3">プレビューの種類</h4>
+              <ul className="space-y-3 text-sm text-muted-foreground">
+                <li className="flex items-start gap-3">
+                  <Terminal className="w-4 h-4 text-violet-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-medium text-foreground">Git コマンドシミュレーター</span>
+                    <span className="mx-1">—</span>
+                    <span>Git コマンドを入力すると、仮想ファイルシステム上でリアルな実行結果がターミナル風に表示されます。実際の環境を使わずにコマンドの動きを確認できます。</span>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Code2 className="w-4 h-4 text-violet-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-medium text-foreground">Markdown プレビュー</span>
+                    <span className="mx-1">—</span>
+                    <span>Markdown 記法で入力した内容が、即座に HTML に変換されてプレビュー表示されます。</span>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Terminal className="w-4 h-4 text-violet-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-medium text-foreground">ターミナルプレビュー</span>
+                    <span className="mx-1">—</span>
+                    <span>入力したコマンドがシンタックスハイライト付きで表示されます。</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            {/* ボタンの説明 */}
+            <div className="mb-6">
+              <h4 className="font-semibold text-foreground text-sm mb-3">ボタンの説明</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div className="flex items-start gap-3 rounded-lg bg-muted/50 p-3">
+                  <div className="flex items-center justify-center h-8 w-8 rounded-md bg-green-600 text-white shrink-0">
+                    <CheckCircle2 className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <span className="font-medium text-foreground text-sm">チェック</span>
+                    <p className="text-xs text-muted-foreground mt-0.5">コードを採点します。キーワードベースの緩い判定なので、完全一致でなくても正解になります。</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3 rounded-lg bg-muted/50 p-3">
+                  <div className="flex items-center justify-center h-8 w-8 rounded-md border border-amber-400 text-amber-500 shrink-0">
+                    <Lightbulb className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <span className="font-medium text-foreground text-sm">ヒント</span>
+                    <p className="text-xs text-muted-foreground mt-0.5">押すたびに段階的にヒントが表示されます。いきなり答えを見ずに、少しずつ手がかりを得られます。</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3 rounded-lg bg-muted/50 p-3">
+                  <div className="flex items-center justify-center h-8 w-8 rounded-md border border-border text-muted-foreground shrink-0">
+                    <Eye className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <span className="font-medium text-foreground text-sm">模範解答</span>
+                    <p className="text-xs text-muted-foreground mt-0.5">模範解答のコードを表示・非表示できます。自分の回答と見比べて学習できます。</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3 rounded-lg bg-muted/50 p-3">
+                  <div className="flex items-center justify-center h-8 w-8 rounded-md border border-border text-muted-foreground shrink-0">
+                    <RotateCcw className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <span className="font-medium text-foreground text-sm">リセット</span>
+                    <p className="text-xs text-muted-foreground mt-0.5">エディタを初期状態に戻します。最初からやり直したいときに使います。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* インフォボックス */}
+            <div className="flex items-start gap-3 rounded-lg bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 p-4">
+              <Keyboard className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
+              <p className="text-sm text-blue-700 dark:text-blue-300">
+                <span className="font-medium">エディタ内ショートカット:</span> Tab でインデント挿入。コードは横スクロール対応。
+              </p>
+            </div>
+          </div>
+
+          {/* 3列グリッド: ショートカット・検索・画面設定 */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* キーボードショートカット */}
             <div className="bg-card border border-border rounded-xl p-6 hover:shadow-md transition-shadow">
               <div className="flex items-center gap-3 mb-4">
@@ -221,34 +322,6 @@ export default function Home() {
                 <li className="flex items-start gap-2">
                   <span className="text-amber-500 shrink-0">•</span>
                   <span>OS 切替（Mac / Windows）でショートカットキーや手順が自動で変わります</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* コーディングチャレンジ */}
-            <div className="bg-card border border-border rounded-xl p-6 hover:shadow-md transition-shadow">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="flex items-center justify-center h-10 w-10 rounded-lg bg-violet-100 dark:bg-violet-900/40 text-violet-600 dark:text-violet-400">
-                  <Code2 className="w-5 h-5" />
-                </div>
-                <h3 className="font-semibold text-foreground text-base">コーディングチャレンジの使い方</h3>
-              </div>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li className="flex items-start gap-2">
-                  <Terminal className="w-4 h-4 text-violet-500 shrink-0 mt-0.5" />
-                  <span>Git コマンドを入力すると疑似ターミナルで実行結果をリアルタイム表示</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-violet-500 shrink-0">•</span>
-                  <span>Markdown はプレビューで即座に HTML 変換表示</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-violet-500 shrink-0">•</span>
-                  <span>「チェック」で採点、「ヒント」で段階的にヒント表示、「模範解答」で正解確認</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-violet-500 shrink-0">•</span>
-                  <span>「リセット」で初期状態に戻せます</span>
                 </li>
               </ul>
             </div>
