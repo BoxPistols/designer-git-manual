@@ -34,6 +34,7 @@ export default function CodingChallenge({ title, description, initialCode, answe
   const [showHint, setShowHint] = useState(false);
   const [hintIndex, setHintIndex] = useState(0);
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
+  const [matchInfo, setMatchInfo] = useState<{ matched: number; total: number } | null>(null);
   const [previewHtml, setPreviewHtml] = useState('');
   const { theme } = useTheme();
   const isDark = theme === 'dark';
@@ -61,9 +62,20 @@ export default function CodingChallenge({ title, description, initialCode, answe
     return () => { if (blobUrl) URL.revokeObjectURL(blobUrl); };
   }, [blobUrl]);
 
-  const handleCheck = () => setIsCorrect(fuzzyCheck(code, answer, keywords));
+  const handleCheck = () => {
+    const correct = fuzzyCheck(code, answer, keywords);
+    setIsCorrect(correct);
+    if (!correct && keywords && keywords.length > 0) {
+      const normalize = (s: string) => s.replace(/\s+/g, ' ').trim();
+      const normalizedCode = normalize(code);
+      const matched = keywords.filter((kw) => normalizedCode.includes(kw)).length;
+      setMatchInfo({ matched, total: keywords.length });
+    } else {
+      setMatchInfo(null);
+    }
+  };
   const handleNextHint = () => { if (hintIndex < hints.length - 1) setHintIndex((prev) => prev + 1); setShowHint(true); };
-  const handleReset = () => { setCode(initialCode); setShowAnswer(false); setShowHint(false); setHintIndex(0); setIsCorrect(null); };
+  const handleReset = () => { setCode(initialCode); setShowAnswer(false); setShowHint(false); setHintIndex(0); setIsCorrect(null); setMatchInfo(null); };
 
   return (
     <div className="rounded-xl border-2 border-emerald-200 dark:border-emerald-800 bg-emerald-50/50 dark:bg-emerald-950/20 p-6 my-6">
@@ -79,7 +91,7 @@ export default function CodingChallenge({ title, description, initialCode, answe
             <div className="flex items-center justify-between px-4 py-2 bg-[#181825] border-b border-[#313244]">
               <span className="text-xs font-mono text-[#cdd6f4]/60 uppercase">エディタ</span>
             </div>
-            <textarea value={code} onChange={(e) => { setCode(e.target.value); setIsCorrect(null); }} spellCheck={false} wrap="off"
+            <textarea value={code} onChange={(e) => { setCode(e.target.value); setIsCorrect(null); setMatchInfo(null); }} spellCheck={false} wrap="off"
               className="w-full py-4 px-5 font-mono text-sm leading-relaxed bg-transparent text-[#cdd6f4] resize-none focus:outline-none min-h-[160px] overflow-auto whitespace-pre"
               rows={Math.max(6, code.split('\n').length + 1)} />
           </div>
@@ -95,14 +107,14 @@ export default function CodingChallenge({ title, description, initialCode, answe
           <div className="flex items-center justify-between px-4 py-2 bg-[#181825] border-b border-[#313244]">
             <span className="text-xs font-mono text-[#cdd6f4]/60 uppercase">エディタ</span>
           </div>
-          <textarea value={code} onChange={(e) => { setCode(e.target.value); setIsCorrect(null); }} spellCheck={false} wrap="off"
+          <textarea value={code} onChange={(e) => { setCode(e.target.value); setIsCorrect(null); setMatchInfo(null); }} spellCheck={false} wrap="off"
             className="w-full py-4 px-5 font-mono text-sm leading-relaxed bg-transparent text-[#cdd6f4] resize-none focus:outline-none min-h-[160px] overflow-auto whitespace-pre"
             rows={Math.max(6, code.split('\n').length + 1)} />
         </div>
       )}
       {isCorrect !== null && (
         <div className={`flex items-center gap-2 px-4 py-2.5 rounded-lg mb-4 ${isCorrect ? 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300' : 'bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-300'}`}>
-          {isCorrect ? (<><CheckCircle2 size={18} /><span className="text-sm font-semibold">正解！素晴らしい！</span></>) : (<><Code2 size={18} /><span className="text-sm font-semibold">もう少し！ヒントを確認してみましょう。</span></>)}
+          {isCorrect ? (<><CheckCircle2 size={18} /><span className="text-sm font-semibold">正解！素晴らしい！</span></>) : (<><Code2 size={18} /><span className="text-sm font-semibold">{matchInfo ? `もう少し！キーワードが ${matchInfo.matched}/${matchInfo.total} 含まれています。` : 'もう少し！ヒントを確認してみましょう。'}</span></>)}
         </div>
       )}
       {showHint && hints.length > 0 && (
